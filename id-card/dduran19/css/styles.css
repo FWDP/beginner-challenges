@@ -131,18 +131,28 @@ body {
     grid-row: 8;
 }
 .submitButton{
+    margin-top: 20px;
+    background-color: lightgreen;
+}
+.cancelButton{
+    margin-top: 10px;
+    background-color: lightgreen;
+}
+.formButton{
     grid-column: 1/3;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 30px;
+    min-width: 350px;
+    border-radius: 15px;
 }
 
 .description{
     font-size: 7px;
 }
-
-
 .small {
     font-size: 12px;
 }
-
 .big {
     font-size: 20px;
 }
