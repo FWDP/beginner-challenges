@@ -1,5 +1,10 @@
-.grid-container{
-    display:grid;
+:root {
+    --debug: 2px solid black;
+}
+
+.grid-container {
+  display: grid;
+  border:var(--debug);
 }
 
 .row-1 {
