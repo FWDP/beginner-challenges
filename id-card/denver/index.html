@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>id card</title>
 </head>
 <body>
     
+    <div class="id-container">
+        <div class="heading">
+            <div class="flag"><img src="images/flag.webp" id="phflag"></div>
+            <div class="title">
+                <h3>REPUBLIC OF THE PHILIPPINES</h3>
+                <h1>ULTIMATE IDENTIFCATION</h1>
+            </div>
+            <div class="shield"><img src="images/shield.png" id="phshield"></div>
+        </div>
+        <div class="id-body">
+            <div class="image">
+                <div class="picture"><img src="images/idPhoto.jpg" id="idPhoto"></div>
+                <div class="barcode"><img src="images/barcode.png" id="idBarcode"></div>
+            </div>
+            <div class="details">
+                <div class="name">
+                    <p>SURNAME, FIRST NAME, MIDDLE NAME</p>
+                    <h2 id="fullName">JUAN, TWO, THREE</h2><!--PUT NAME HERE-->
+                </div>
+                <div class="birth">
+                    <p>DATE OF BIRTH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLACE OF BIRTH</p>
+                    <div class="birthDetails">
+                        <h2 id="birthDate">1990/23/02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2><!--PUT BIRTHYEAR HERE-->
+                        <h2 id="sex">M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> <!--PUT SEX HERE-->
+                        <h2 id="city">CHINA</h2><!--PUT BIRTHCITY HERE-->
+                    </div>
+                </div>
+                <div class="address">
+                    <p>ADDRESS </p>
+                    <div class="addressContainer">
+                        <h2 id="fullAddress">Roxas Ave #13 Super Hero Street, 100 METRO MANILA</h2><!--PUT ADDRESS HERE-->
+                    </div>
+                </div>
+                <div class="types">
+                    <p>BLOOD TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EYES COLOR</p>
+                    <div class="types-container">
+                        <!--PUT BLOODTYPE HERE--><h2 id="blood">A+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2><!--PUT BLOODTYPE HERE-->
+                        <h2 id="eye">YELLOW</h2><!--PUT EYECOLOR HERE-->
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form">
+                <div class="form-top">
+
+                    <div class="label">
+                        <label for="userName">Input Full Name here:</label>
+                        <label for="userBirthYear">Input Birth Year:</label>
+                        <label for="userSex">Inputer Sex:</label>
+                        <label for="userPlaceBirth">Input Birth Place:</label>
+                        <label for="userAddress">Input Address:</label>
+                        <label for="userBloodType">Input Blood Type:</label>
+                        <label for="userEyeColor">Input Eyes Color:</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="userName">
+                        
+                    
+                        <input type="date" id="userBirthYear">
+                    
+                    
+                        <input type="text" id="userSex">
+                        
+                    
+                    
+                         <input type="text" id="userPlaceBirth">
+                    
+                    
+                        <input type="text" id="userAddress">
+                    
+                    
+                    <input type="text" id="userBloodType">
+                    
+                    
+                    <input type="text" id="userEyeColor">
+                    
+                    
+                    </div>
+
+                </div>
+                
+                <div class="form-bottom"> <button  id="submitBtn">Submit</button></div>
+               
+                
+            </div>
+            
+        </div>
+
+
+    </div>
+
+   
+   
+    <script src="index.js"></script>
 </body>
 </html>
