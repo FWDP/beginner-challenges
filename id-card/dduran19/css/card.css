@@ -1,0 +1,32 @@
+:root{
+    --debug: 2px solid black;
+}
+.Card{
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    min-width: 500px;
+    border-radius: 15px;
+    border:2px solid var(--id-border);
+    overflow: hidden;
+}
+.cardHeader{
+    background: linear-gradient(
+        to right,var(--blue-bg-color),
+         var(--id-bg-color), 
+        var(--blue-bg-color));
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid var(--id-border);
+    padding:10px;
+}
+.cardBody{
+    margin: 20px;
+}
+
+.newDetailLabel{
+    padding:5px
+}
