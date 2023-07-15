@@ -44,7 +44,6 @@ body {
     box-shadow:  var(--shadow);
     border: 1px solid var(--id-border);
 
-    display:grid;
     grid-template-columns: 
         141.91px 35.48px 100.45px
         70.96px 70.96px 70.96px;
@@ -71,15 +70,11 @@ body {
 .flag {
     background: var(--flag);
     background-repeat: no-repeat;
-    grid-column: 1;
-    grid-row: 1/2; 
 }
 .coat {
     background: var(--right-logo);
     background-size: contain;
     background-repeat: no-repeat;
-    grid-column: 6;
-    grid-row: 1;
     padding-top: 3px;
     width: 55px;
 }
@@ -89,15 +84,11 @@ body {
     background-size: cover;
     border-radius: 10px;
     border: 1px solid var(--id-border);
-    grid-column: 1/2;
-    grid-row: 2/10;
     width: 100%;
     height: 100%;
 }
 .barcode{
     font-family: var(--font-barcode);
-    grid-column: 1/2;
-    grid-row: 10/10;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -107,28 +98,9 @@ body {
 
 .republic {
     padding-top: 15px;
-    grid-column: 1/8;
 }
 .national{
     padding-top:27px;
-    grid-column: 1/8;
-}
-.namedesc{
-    grid-column: 3/5;
-
-}
-.nameData{
-    grid-column: 3/6;
-}
-.addDesc{
-    grid-column: 3/6;
-}
-.addData{
-    grid-column: 3/7;
-}
-.eyeColorDesc{
-    grid-column: 5;
-    grid-row: 8;
 }
 .submitButton{
     margin-top: 20px;
@@ -170,3 +142,15 @@ body {
     font-size: 15px; 
     font-weight: bold;
 }
+
+#newDetails{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%,50%);
+}
+#actualId:hover{
+    transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+}   
