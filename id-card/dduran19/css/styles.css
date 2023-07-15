@@ -10,7 +10,7 @@
     --id-bg-color:   #c7eefe; 
     --id-border: black;
     --font-color: rgb(0, 0, 0);
-    --shadow: rgb(20, 20, 20);
+    --shadow: 5px 5px 10px 1px rgb(20, 20, 20);
     
     /* font-family */
     --font-barcode: 'Libre Barcode 128', cursive;
@@ -41,7 +41,7 @@ body {
     background-repeat: no-repeat;
     background-position-x: 70%;
     background-blend-mode:screen;
-    box-shadow:  5px 5px 10px 1px var(--shadow);
+    box-shadow:  var(--shadow);
     border: 1px solid var(--id-border);
 
     display:grid;
