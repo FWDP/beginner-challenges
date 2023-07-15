@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="grids.css" />
+    <link rel="stylesheet" href="card.css" />
+    <title>Identification Card</title>
+</head>
+
+<body>
+    <div class="actualId">
+        <div class="flag pt-13 ml-20" alt="Philippine Flag"></div>
+        <div class="coat" alt="Philippine Coat of Arms"></div>
+        <div class="profile ml-20" id="profilePicture"></div>
+        <div class="barcode ml-20" id="barcode" alt="barcode">JUAN DELA CRUZ</div>
+        <div class="small centered-text republic">
+            REPUBLIC OF THE PHILIPPINES
+        </div>
+        <div class="big centered-text national">FWDP IDENTIFICATION</div>
+        <div class="description namedesc">SURNAME, FIRST NAME, MIDDLE NAME</div>
+        <div class="data nameData" id="name">DELA CRUZ, JUAN PEDRO</div>
+        <div class="description dobDesc">DATE OF BIRTH</div>
+        <div class="data dobData" id="dob">01/01/1990</div>
+        <div class="description sexDesc">SEX</div>
+        <div class="data sexData" id="sex">M</div>
+        <div class="description pobDesc">PLACE OF BIRTH</div>
+        <div class="data pobData" id="pob">MANILA</div>
+        <div class="description addDesc">ADDRESS</div>
+        <div class="data addData" id="address">
+            ROXAS BLVD ERMITA, ZONE 72, MANILA 1000 METRO MANILA
+        </div>
+        <div class="description bloodTypeDesc">BLOOD TYPE</div>
+        <div class="data bloodTypeData" id="bloodType">A+</div>
+        <div class="description eyeColorDesc">EYES COLOR</div>
+        <div class="data eyeColorData" id="eyeColor">BROWN</div>
+    </div>
+    <div class="Card grid-container" id="newDetails">
+        <div class="cardHeader">
+            <p id="newDetailsHeader">Details</p>
+        </div>
+        <div class="cardBody" id="cardBody">
+            <div class="div">
+                <input class="col-2 row-1" type="text" name="firstName" id="firstName" placeholder="First Name" />
+                <input class="col-2 row-2" type="text" name="middleName" id="middleName" placeholder="Middle Name"/>
+                <input class="col-2 row-3" type="text" name="lastName" id="lastName" placeholder="Last Name"/>
+                <input class="col-2 row-4" type="date" name="dateOfBirth" id="dateOfBirth" />
+                <select name="sex" id="sex" >
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+                <input class="col-2 row-5" type="text" name="placeOfBirth" id="placeOfBirth" placeholder="Place of Birth"/>
+                <input class="col-2 row-6" type="text" name="address" id="address" placeholder="Home Address"/>
+                <select class="col-2 row-7">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <select class="col-2 row-8">
+                    <option value="Amber">Amber</option>
+                    <option value="Black">Blue</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Gray">Gray</option>
+                    <option value="Green">Green</option>
+                    <option value="Hazel">Hazel</option>
+                </select>  
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
