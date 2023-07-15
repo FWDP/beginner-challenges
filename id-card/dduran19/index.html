@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="grids.css" />
-    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/grids.css" />
+    <link rel="stylesheet" href="css/card.css" />
     <title>Identification Card</title>
 </head>
 
@@ -16,32 +16,32 @@
         <div class="coat" alt="Philippine Coat of Arms"></div>
         <div class="profile ml-20" id="profilePicture"></div>
         <div class="barcode ml-20" id="barcode" alt="barcode">JUAN DELA CRUZ</div>
-        <div class="small centered-text republic">
+        <div class="small centered-text republic row-1">
             REPUBLIC OF THE PHILIPPINES
         </div>
-        <div class="big centered-text national">FWDP IDENTIFICATION</div>
-        <div class="description namedesc">SURNAME, FIRST NAME, MIDDLE NAME</div>
-        <div class="data nameData" id="name">DELA CRUZ, JUAN PEDRO</div>
-        <div class="description dobDesc">DATE OF BIRTH</div>
-        <div class="data dobData" id="dob">01/01/1990</div>
-        <div class="description sexDesc">SEX</div>
-        <div class="data sexData" id="sex">M</div>
-        <div class="description pobDesc">PLACE OF BIRTH</div>
-        <div class="data pobData" id="pob">MANILA</div>
-        <div class="description addDesc">ADDRESS</div>
-        <div class="data addData" id="address">
+        <div class="big centered-text national row-1">FWDP IDENTIFICATION</div>
+        <div class="description namedesc row-2">SURNAME, FIRST NAME, MIDDLE NAME</div>
+        <div class="data nameData row-3" id="name">DELA CRUZ, JUAN PEDRO</div>
+        <div class="description dobDesc row-4 col-3">DATE OF BIRTH</div>
+        <div class="data dobData col-3 row-5" id="dob">01/01/1990</div>
+        <div class="description sexDesc row-4 col-4">SEX</div>
+        <div class="data sexData col-4 row-5" id="sex">M</div>
+        <div class="description pobDesc col-5 row-4">PLACE OF BIRTH</div>
+        <div class="data pobData col-5 row-5" id="pob">MANILA</div>
+        <div class="description addDesc row-6">ADDRESS</div>
+        <div class="data addData row-7" id="address">
             ROXAS BLVD ERMITA, ZONE 72, MANILA 1000 METRO MANILA
         </div>
-        <div class="description bloodTypeDesc">BLOOD TYPE</div>
-        <div class="data bloodTypeData" id="bloodType">A+</div>
-        <div class="description eyeColorDesc">EYES COLOR</div>
+        <div class="description bloodTypeDesc col-3 row-8">BLOOD TYPE</div>
+        <div class="data bloodTypeData col-3 row-9" id="bloodType">A+</div>
+        <div class="description eyeColorDesc col-5 row-9">EYES COLOR</div>
         <div class="data eyeColorData" id="eyeColor">BROWN</div>
     </div>
     <div class="Card" id="newDetails">
         <div class="cardHeader">
             <p id="newDetailsHeader">Details</p>
         </div>
-        <div class="cardBody grid-container" id="cardBody">
+        <form class="cardBody grid-container" id="cardBody">
 
             <div class="desc newDetailLabel col-1 row-1">First Name</div>
             <div class="desc newDetailLabel col-1 row-2">Middle Name</div>
@@ -82,7 +82,9 @@
                 <option value="Green">Green</option>
                 <option value="Hazel">Hazel</option>
             </select>  
-        </div>
+
+            <input class="submitButton row-10" type="button" value="Submit">
+        </form>
     </div>
 </body>
 
