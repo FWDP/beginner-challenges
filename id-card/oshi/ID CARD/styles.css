@@ -10,9 +10,10 @@ body{
     padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 header{
     display: flex;
@@ -47,6 +48,7 @@ header{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
     position: absolute;
     left: 50px;
+    overflow: hidden;
 }
 .pic img{
   width: 100%;
@@ -123,3 +125,31 @@ header{
     flex-wrap: wrap;
     justify-content:space-between;
 }
+
+.formCard{
+    width: 60%;
+    height: 50%;
+    border: 1px solid black;
+    background-color: rgb(222, 255, 255);
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fCard{
+    font-size: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 30px;
+    overflow: auto;
+}
+input, select {
+    font-size: 40px;
+ }
+
