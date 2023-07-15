@@ -11,6 +11,7 @@
     border-radius: 15px;
     border:2px solid var(--id-border);
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 .cardHeader{
     background: linear-gradient(
