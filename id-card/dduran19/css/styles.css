@@ -136,7 +136,7 @@ body {
 }
 .cancelButton{
     margin-top: 10px;
-    background-color: lightgreen;
+    background-color: rgb(238, 150, 144);
 }
 .formButton{
     grid-column: 1/3;
