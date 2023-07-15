@@ -4,7 +4,6 @@
 
 .grid-container {
   display: grid;
-  border:var(--debug);
 }
 
 .row-1 {
@@ -45,6 +44,26 @@
 
 .row-10 {
   grid-row: 10;
+}
+
+.row-11 {
+  grid-row: 11;
+}
+
+.row-12 {
+  grid-row: 12;
+}
+
+.row-13 {
+  grid-row: 13;
+}
+
+.row-14 {
+  grid-row: 14;
+}
+
+.row-15 {
+  grid-row: 15;
 }
 
 .col-1 {
