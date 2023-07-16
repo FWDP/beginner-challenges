@@ -22,7 +22,7 @@
     --font-details:Inter;
 
     /* images */
-    --profile-picture: url("../assets/Yss.webp");
+    --profile-picture: url("https://media.licdn.com/dms/image/D5603AQExNmgonLxlHQ/profile-displayphoto-shrink_800_800/0/1683598618905?e=1695254400&v=beta&t=jFyQy3g7F9HFmjDC-A024HikoM1ID_ZAd6HWh4LVuq8");
     --flag: url("../assets/PHFlag.svg");
     --right-logo: url("../assets/CoatofArms.png");
     --philippines: url("../assets/ph.png")
@@ -94,6 +94,7 @@ body {
 .profile{
     background: var(--profile-picture);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     border-radius: 10px;
     border: 1px solid var(--id-border);

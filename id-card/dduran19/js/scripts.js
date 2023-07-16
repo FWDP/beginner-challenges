@@ -141,12 +141,8 @@ function updateSubmitButton(){
 }
 
 function updateQRcode(name){
-    // space = %20
-    // new line = %0A
-
     const parsedData=`Hi my name is ${name}.`
 
-    console.log(parsedData)
     qr=`https://barcode.orcascan.com/?type=qr&data=${parsedData}`;
     barcode.setAttribute('src',qr);
     
