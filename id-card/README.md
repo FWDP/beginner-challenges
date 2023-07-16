@@ -1,10 +1,10 @@
 # ID Card
 
-In this project, you will learn the basics of HTML, CSS, and javascript. Your task is to create an clone of this [ID](https://tribune.net.ph/wp-content/uploads/2022/08/National-ID.jpg). The goal of this project is to expose you in advancing your skills without relying on existing frameworks. While this may help you enhance your technical skills, it is **HIGHLY** recommended to maximize the opportunity to level-up your soft skills too! Whenever you experience any kind of struggles, you found a discovery, share it with the community. Not only that you are helping them out, but you practice your verbal skills too!
+In this project, you will learn the basics of HTML, CSS, and javascript. Your task is to create an improved clone of this [ID](https://tribune.net.ph/wp-content/uploads/2022/08/National-ID.jpg). The goal of this project is to expose you in advancing your skills without relying on existing frameworks. While this may help you enhance your technical skills, it is **HIGHLY** recommended to maximize the opportunity to level-up your soft skills too! Whenever you experience any kind of struggles, you found a discovery, share it with the community. Not only that you are helping them out, but you practice your verbal skills too!
 
 Project Curriculum:
 -
-1. Github Familiarization
+1. GitHub Familiarization
     - The official repository can be found [here](https://github.com/FWDP/beginner-challenges).
     - Send your Github email to any of FWDP admins here on Discord. They will give you write permissions for the project.
     - Ask a buddy/mentor on the process of cloning the repository but the general process is as follows:
