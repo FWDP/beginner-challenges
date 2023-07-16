@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National ID</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img class="img2" src="images/Flag-Philippines.png"></img>
+        <div class="word1"><p>REPUBLIC OF THE PHILIPPINES</p>
+        <h4>FWDP INDENTIFICATION</h4></div>
+        <img class="img1" src="images/ph logo.png"></img>
+    </div>
+    <div class="image">
+    </div>
+    
+    <div class="qrcode"></div>
+    <div class="info">
+        <div class="name">
+            <p>SURNAME, &nbsp;FIRST NAME,&nbsp; MIDDLE NAME</p>
+            <h4>DELA CRUZ,&nbsp;&nbsp; JUAN PEDRO&nbsp; PAINDOKO</h4>
+        </div>
+        <div class="DOB">
+            <p>DATE OF BIRTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SEX &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLACE OF BIRTH</p>
+            <h4>1990/01/01&nbsp;&nbsp; &nbsp; M&nbsp;&nbsp;&nbsp; MANILA</h4>
+        </div>
+        <div class="address">
+            <p>ADDRESS</p>
+            <h4>ROXAS BLVD  ERMITA, ZONE 72, MANILA, 1000 METRO MANILA</h4>
+        </div>
+        <div class="blood">
+            <p>BLOOD TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  EYES COLOR</p>
+            <h4>A+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  BROWN</h4>
+        </div>
+    </div>
+</div>
+<!--
+    
+    SEX
+    
+    ADDRESS
+    
+    -->
+    <div class="container-form">
+    <form>
+        <label for="full-name" class="full-name">FULLNAME</label>
+        <input type="text" name="full-name" id="full-name" placeholder="Enter your Full name" !required>
+        <label for="bdate" class="bdate">BIRTHDATE</label>
+        <input type="date" name="bdate" id="bdate" placeholder="Date/Month/Year" !required >
+        <label for="sex" class="sex"class="sex">GENDER</label>
+        <input type="text" id="sex" name="sex" pattern="[A-Za-z]" title="Type M for 'male' and F for'FEMALE" !required>
+        <label for="bod" class="bod">BIRTH OF PLACE</label>
+        <input type="text" id="bod" name="bod" placeholder="Street/Brgy/City/Province" !required>
+        <label for="address" class="address">ADDRESS</label>
+        <input type="text" id="address" name="address" placeholder="Street/Brgy/City/Province" !required>
+        <label for="bloodtype" class="bloodtype">BLOODTYPE</label>
+        <input type="text" id="bloodtype" name="bloodtype" placeholder="Enter your bloodtype"pattern="[A-Za-z]" title="Example: O+" required!>
+        <label for="eye-color" class="eye-color">EYE COLOR</label>
+        <input type="text" name="eye-color" id="eye-color" placeholder="Enter your Eye-color" !required>
+        <label for="img">Upload Image</label>
+        <input type="file" id="img" name="img" accept="image/*">
+        <input type="submit" id="submit" value="submit" style="grid-column: 1 / 3;"> 
+    </form>
+</div>
+</body>
+</html>
