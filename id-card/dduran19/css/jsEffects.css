@@ -1,0 +1,11 @@
+.blur{
+    filter: blur(0.8rem);
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
