@@ -16,7 +16,7 @@
         <div class="cardHeader">
             <p id="newDetailsHeader">Details</p>
         </div>
-        <form class="cardBody grid-container" id="cardBody">
+        <form class="cardBody grid-container" id="actualForm">
 
             <div class="desc newDetailLabel col-1 row-1">First Name</div>
             <div class="desc newDetailLabel col-1 row-2">Middle Name</div>
@@ -27,18 +27,19 @@
             <div class="desc newDetailLabel col-1 row-7">Home Address</div>
             <div class="desc newDetailLabel col-1 row-8">Blood Type</div>
             <div class="desc newDetailLabel col-1 row-9">Eye Color</div>
+            <div class="desc newDetailLabel col-1 row-10">Id Picture</div>
 
-            <input class="col-2 row-1" type="text" name="firstName" id="firstName" placeholder="First Name" required/>
-            <input class="col-2 row-2" type="text" name="middleName" id="middleName" placeholder="Middle Name"/>
-            <input class="col-2 row-3" type="text" name="lastName" id="lastName" placeholder="Last Name" required/>
+            <input class="col-2 row-1" type="text" name="firstName" id="firstName" placeholder="First Name" required autocomplete/>
+            <input class="col-2 row-2" type="text" name="middleName" id="middleName" placeholder="Middle Name" autocomplete/>
+            <input class="col-2 row-3" type="text" name="lastName" id="lastName" placeholder="Last Name" required autocomplete/>
             <input class="col-2 row-4" type="date" name="dateOfBirth" id="dob"  required/>
             <select class="col-2 row-5" name="sex" id="sex"  required>
                 <option value="M">M</option>
                 <option value="F">F</option>
             </select>
-            <input class="col-2 row-6" type="text" name="placeOfBirth" id="pob" placeholder="Place of Birth" required>
-            <input class="col-2 row-7" type="text" name="address" id="address" placeholder="Home Address" required/>
-            <select class="col-2 row-8" id="bloodType" required>
+            <input class="col-2 row-6" type="text" name="placeOfBirth" id="pob" placeholder="Place of Birth" required autocomplete>
+            <input class="col-2 row-7" type="text" name="address" id="address" placeholder="Home Address" required autocomplete/>
+            <select class="col-2 row-8" id="bloodType" required autocomplete>
                 <option value="A+">A+</option>
                 <option value="A-">A-</option>
                 <option value="AB+">AB+</option>
@@ -48,24 +49,24 @@
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
             </select>
-            <select class="col-2 row-9" id="eyeColor" required>
+            <select class="col-2 row-9" id="eyeColor" required autocomplete>
                 <option value="Amber">Amber</option>
                 <option value="Black">Blue</option>
-                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
                 <option value="Brown">Brown</option>
                 <option value="Gray">Gray</option>
                 <option value="Green">Green</option>
                 <option value="Hazel">Hazel</option>
             </select>  
-
-            <input class="submitButton formButton row-10" id="submitButton" type="button" value="Submit">
-            <input class="cancelButton formButton row-11" id="cancelButton" type="button" value="Cancel">
+            <input class="row-10 col-2" type="file" name="profilePicture" id="profilePicture" accept=".jpg, .png, .svg">
+            <input class="submitButton formButton row-11" disabled id="submitButton" type="button" value="Submit">
+            <input class="cancelButton formButton row-12" id="cancelButton" type="button" value="Cancel">
         </form>
     </div>
     <div class="actualId grid-container" id="actualId">
         <div class="flag pt-13 ml-20 row-1-2 col-1" alt="Philippine Flag"></div>
         <div class="coat row-1 col-6" alt="Philippine Coat of Arms"></div>
-        <div class="profile ml-20 row-2-10 col-1-2" id="profilePicture"></div>
+        <div class="profile ml-20 row-2-10 col-1-2" id="profilePictureView"></div>
         <div class="barcode ml-20 row-10-11 col-1" id="barcode" alt="barcode">JUAN DELA CRUZ</div>
         <div class="small centered-text republic row-1 col-1-8">
             REPUBLIC OF THE PHILIPPINES
