@@ -1,0 +1,16 @@
+.lightRook {background: url("../assets/lightRook.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.lightKnight {background: url("../assets/lightKnight.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.lightBishop {background: url("../assets/lightBishop.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.lightQueen {background: url("../assets/lightQueen.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.lightKing {background: url("../assets/lightKing.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.lightBishop {background: url("../assets/lightBishop.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.lightKnight {background: url("../assets/lightKnight.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.lightPawn {background: url("../assets/lightPawn.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkRook {background: url("../assets/darkRook.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkKnight {background: url("../assets/darkKnight.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkBishop {background: url("../assets/darkBishop.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkQueen {background: url("../assets/darkQueen.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkKing {background: url("../assets/darkKing.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkBishop {background: url("../assets/darkBishop.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkKnight {background: url("../assets/darkKnight.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
+.darkPawn {background: url("../assets/darkPawn.svg") no-repeat; width: var(--chess-tile);height: var(--chess-tile);}
