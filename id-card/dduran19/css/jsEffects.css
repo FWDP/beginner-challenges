@@ -31,11 +31,14 @@
     }
 }
 @keyframes unblur {
-    from{
+    0%{
         transform: scale(1.0,1.0);
     }
-    to{
+    50%{
         transform: scale(1.03,1.03);
+    }
+    to{
+        transform: scale(1.0,1.0);
     }
 }
 
@@ -47,7 +50,6 @@
 }
 .unblur{
     animation: unblur 0.55s ease;
-    animation-fill-mode: forwards;
 }
 
 
@@ -56,14 +58,6 @@
     animation-duration: 0.55s;
     animation-timing-function: ease;
     display: block;
-}
-
-.floatDown {
-    animation-name: floatDown ;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    display: none;
 }
 
 

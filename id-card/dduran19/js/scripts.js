@@ -44,6 +44,7 @@ function toggleDetailsForm() {
 
         }
 
+
         blank.classList.toggle("hide");
     }
     catch(error){
