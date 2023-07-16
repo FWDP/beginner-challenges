@@ -5,7 +5,8 @@ body{
     width: 60%;
     height: 40%;
     border: 1px solid black;
-    background-color: aqua;
+    background-color: rgb(206, 255, 255);
+   
     border-radius: 30px;
     padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
@@ -24,6 +25,14 @@ header{
     object-fit: cover;
     margin-bottom: 10px;
     gap: 10px;
+}
+.philArch{
+    font-size: 90%;
+    background-size: contain;
+    mix-blend-mode: screen;
+    z-index: -1;
+    position: absolute;
+    top: 50px;
 }
 .phil-logo img{
   width: 100%;
@@ -128,10 +137,10 @@ header{
 
 .formCard{
     width: 60%;
-    height: 50%;
+    height: 45%;
     border: 1px solid black;
     background-color: rgb(222, 255, 255);
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
     position: absolute;
@@ -141,15 +150,27 @@ header{
 }
 
 .fCard{
-    font-size: 40px;
+    font-size: 30px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 30px;
     overflow: auto;
 }
 input, select {
     font-size: 40px;
+    flex: 1 0 40px;
  }
-
+ #fID{
+    font-size: 30px;
+ }
+ input.submit{
+    font-size: 40px;
+    margin-left: 45%;
+    border-radius: 15px;
+    background-color: aqua;
+ }
+input::placeholder{
+    font-size: 30px;
+}

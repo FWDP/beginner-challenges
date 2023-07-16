@@ -16,6 +16,7 @@
                 <h1 class="nat">NATIONAL IDENTIFICATION</h1>
             </div>
             <div class="rep-logo"><img src="./assets/logo2.png" alt="republic"></div>
+            <div class="philArch"><img src="./assets/ph.png" alt="arch"></div> 
         </header>
         <div class="info">
             <div class="frame">
@@ -57,9 +58,7 @@
 <!-- ID CARD FRAME --> 
     <div class="formCard">
         <form class="fCard">
-            First Name: <input type="text">
-            Last Name: <input type="text">
-            Middle Name: <input type="text">
+            Full Name: <input type="text" placeholder="Last name,First name,Middle name">            
             Date of Birth: <input type="date" name="birthday" id="dob">
             Sex: <select name="sex" id="SEX" value="sex">
                 <option value="Male">Male</option>
@@ -78,8 +77,12 @@
                 <option value="O-">O-</option>
             </select>
             Eye Color: <input type="text">
+            Upload ID: <input type="file" name="faceID" id="fID">
+
         </form>
+        <input class="submit" type="button" value="Submit">
     </div>
-    
+    <script src="./script.js"></script>
 </body>
+
 </html>
