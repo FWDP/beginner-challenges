@@ -1,40 +1,56 @@
-
-const actualId=document.getElementById("actualId")
-const actualForm=document.getElementById("actualForm")
+document.addEventListener("DOMContentLoaded",() => {
+const actualId=document.getElementById("actualId");
+const blank=document.getElementById("blank");
+const actualForm=document.getElementById("actualForm");
 const newDetailsForm = document.getElementById("newDetails");
-const submitButton = document.getElementById("submitButton")
-const cancelButton = document.getElementById("cancelButton")
+const submitButton = document.getElementById("submitButton");
+const cancelButton = document.getElementById("cancelButton");
 
-const firstNameField = document.getElementById("firstName")
-const middleNameField = document.getElementById("middleName")
-const lastNameField = document.getElementById("lastName")
-const dobField = document.getElementById("dob")
-const sexField = document.getElementById("sex")
-const pobField = document.getElementById("pob")
-const addressField = document.getElementById("address")
-const bloodTypeField = document.getElementById("bloodType")
-const eyesColorField = document.getElementById("eyeColor")
+const firstNameField = document.getElementById("firstName");
+const middleNameField = document.getElementById("middleName");
+const lastNameField = document.getElementById("lastName");
+const dobField = document.getElementById("dob");
+const sexField = document.getElementById("sex");
+const pobField = document.getElementById("pob");
+const addressField = document.getElementById("address");
+const bloodTypeField = document.getElementById("bloodType");
+const eyesColorField = document.getElementById("eyeColor");
+const profilePictureField = document.getElementById("profilePicture");
+const profilePicture=document.getElementById("profilePictureView");
+
+let PROFILEPICTUREIMAGE;
 
 function toggleDetailsForm() {
     try{
-        resetForm()
-        const {display: detailFormDisplay} = getComputedStyle(newDetailsForm)
-        
-        if ( detailFormDisplay === "none") {
-            actualId.classList.add("blur")
-            newDetailsForm.classList.replace("hide","show")
 
-        } else {
-            actualId.classList.remove("blur");
-            newDetailsForm.classList.replace("show","hide")
+        resetForm()
+        actualId.classList.toggle("blur");
+
+        if(actualId.classList.contains("blur")){
+            actualId.classList.remove("unblur");
+        }else{
+            actualId.classList.add("unblur");
         }
+
+        newDetailsForm.classList.toggle('floatUp')
+        if(newDetailsForm.classList.contains("floatUp")){
+            newDetailsForm.classList.remove("hide");
+            newDetailsForm.classList.remove("floatDown");
+            
+        }else{
+            newDetailsForm.classList.add("floatDown");
+            newDetailsForm.classList.add("hide");
+
+        }
+
+        blank.classList.toggle("hide");
     }
     catch(error){
     console.log(error)
     }
 }
 
-function handleSubmit(){
+function handleSubmit() {
     const {firstName,
         middleName,
         lastName,
@@ -51,8 +67,8 @@ function handleSubmit(){
                 date.getMonth() + 1,
                 date.getDate(),
                 date.getFullYear()].join('/')
-
-    // console.log(fullName,dateString,sex,pob,address,bloodType,eyesColor)
+    
+    profilePicture.setAttribute('src', PROFILEPICTUREIMAGE);      
     document.getElementById("nameView").innerHTML=fullName
     document.getElementById("dobView").innerHTML=dateString
     document.getElementById("sexView").innerHTML=sex
@@ -62,6 +78,15 @@ function handleSubmit(){
     document.getElementById("eyeColorView").innerHTML=eyesColor
 
     toggleDetailsForm()
+}
+
+function handlePictureUpload(event) {
+    const picture = event.target.files[0];
+    let pictureReader = new FileReader;
+    pictureReader.readAsDataURL(picture);
+    pictureReader.onload = () => {
+        PROFILEPICTUREIMAGE=pictureReader.result
+    };
 }
 
 function getFormValues() {
@@ -114,8 +139,10 @@ function updateSubmitButton(){
     }
 }
 
-actualId.addEventListener("click", toggleDetailsForm);
+actualId.addEventListener("dblclick", toggleDetailsForm);
+
 cancelButton.addEventListener("click",toggleDetailsForm)
+blank.addEventListener("click",toggleDetailsForm)
 submitButton.addEventListener("click",handleSubmit)
 
 firstNameField.addEventListener('change', updateSubmitButton)
@@ -127,3 +154,4 @@ pobField.addEventListener('change', updateSubmitButton)
 addressField.addEventListener('change', updateSubmitButton)
 bloodTypeField.addEventListener('change', updateSubmitButton)
 eyesColorField.addEventListener('change', updateSubmitButton)
+profilePictureField.addEventListener('change', handlePictureUpload)});

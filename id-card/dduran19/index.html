@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/grids.css" />
     <link rel="stylesheet" href="css/card.css" />
     <link rel="stylesheet" href="css/jsEffects.css">
+    <script src="js/scripts.js"></script>
     <title>Identification Card</title>
 </head>
 
 <body>
+    <div class="hide" id="blank"></div>
     <div class="Card hide" id="newDetails">
         <div class="cardHeader">
             <p id="newDetailsHeader">Details</p>
@@ -66,14 +68,14 @@
     <div class="actualId grid-container" id="actualId">
         <div class="flag pt-13 ml-20 row-1-2 col-1" alt="Philippine Flag"></div>
         <div class="coat row-1 col-6" alt="Philippine Coat of Arms"></div>
-        <div class="profile ml-20 row-2-10 col-1-2" id="profilePictureView"></div>
+        <img class="profile ml-20 row-2-10 col-1-2" id="profilePictureView">
         <div class="barcode ml-20 row-10-11 col-1" id="barcode" alt="barcode">JUAN DELA CRUZ</div>
         <div class="small centered-text republic row-1 col-1-8">
             REPUBLIC OF THE PHILIPPINES
         </div>
         <div class="big centered-text national row-1 col-1-8">FWDP IDENTIFICATION</div>
         <div class="description row-2 col-3-5">SURNAME, FIRST NAME, MIDDLE NAME</div>
-        <div class="data row-3 col-3-6" id="nameView">DELA CRUZ, JUAN PEDRO</div>
+        <div class="data row-3 col-3-7" id="nameView">DELA CRUZ, JUAN PEDRO</div>
         <div class="description row-4 col-3">DATE OF BIRTH</div>
         <div class="data col-3 row-5" id="dobView">01/01/1990</div>
         <div class="description row-4 col-4">SEX</div>
@@ -89,8 +91,6 @@
         <div class="description col-5 row-8">EYES COLOR</div>
         <div class="data col-5 row-9" id="eyeColorView">BROWN</div>
     </div>
-    
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>

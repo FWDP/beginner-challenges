@@ -1,6 +1,71 @@
-.blur{
-    filter: blur(0.8rem);
+/* Animations */
+@keyframes floatUp{
+    from{
+        transform: translate(-50%,-50%);
+        filter: blur(0.8rem);
+    }
+    to{
+        transform: translate(-50%,-80%);
+        filter: blur(0);
+    }
 }
+
+@keyframes floatDown{
+    from{
+        transform: translate(-50%,-80%);
+    }
+    to{
+        transform: translate(-50%,-50%);
+    }
+    
+}
+
+@keyframes blur{
+    from{
+        transform: scale(1.03,1.03);
+        filter: blur(0);
+    }
+    to{
+        transform: scale(1.0,1.0);
+        filter: blur(0.1rem);
+    }
+}
+@keyframes unblur {
+    from{
+        transform: scale(1.0,1.0);
+    }
+    to{
+        transform: scale(1.03,1.03);
+    }
+}
+
+
+.blur{
+    animation: blur 0.75s ease;
+    animation-fill-mode: forwards;
+
+}
+.unblur{
+    animation: unblur 0.55s ease;
+    animation-fill-mode: forwards;
+}
+
+
+.floatUp {
+    animation-name: floatUp ;
+    animation-duration: 0.55s;
+    animation-timing-function: ease;
+    display: block;
+}
+
+.floatDown {
+    animation-name: floatDown ;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
 
 .show{
     display: block;
