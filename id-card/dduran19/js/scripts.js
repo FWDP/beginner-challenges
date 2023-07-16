@@ -99,7 +99,7 @@ function getFormValues() {
     const sex = sexField.value.toUpperCase()
     const pob = pobField.value.toUpperCase()
     const address = addressField.value.toUpperCase()
-    const bloodType = bloodTypeField.value.toUpperCase()
+    const bloodType = bloodTypeField.value
     const eyesColor = eyesColorField.value.toUpperCase()
 
     return {
@@ -120,20 +120,18 @@ function resetForm(){
 }
 
 function updateSubmitButton(){
-    const {firstName,
-        middleName,
-        lastName,
-        dob,
-        sex,
-        pob,
-        address,
-        bloodType,
-        eyesColor} = getFormValues();
-    let valid = false;
-    if(firstName && lastName && dob && sex && pob && address && bloodType && eyesColor){
-        valid = true;
-    }
-    console.log("valid", valid);
+    const formValues = getFormValues();
+    const requiredFormValues = [formValues.firstName,
+        formValues.middleName,
+        formValues.lastName,
+        formValues.dob,
+        formValues.sex,
+        formValues.pob,
+        formValues.address,
+        formValues.bloodType,
+        formValues.eyesColor];
+    const valid = requiredFormValues.every(formValue =>!!formValue);
+
     if (valid){
         submitButton.removeAttribute('disabled');
     } else {
