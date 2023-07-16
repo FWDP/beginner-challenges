@@ -6,6 +6,7 @@ const newDetailsForm = document.getElementById("newDetails");
 const submitButton = document.getElementById("submitButton");
 const cancelButton = document.getElementById("cancelButton");
 
+const barcode = document.getElementById("barcode");
 const firstNameField = document.getElementById("firstName");
 const middleNameField = document.getElementById("middleName");
 const lastNameField = document.getElementById("lastName");
@@ -59,7 +60,7 @@ function handleSubmit() {
         pob,
         address,
         bloodType,
-        eyesColor} = getFormValues();
+        eyeColor} = getFormValues();
 
     const fullName = `${lastName}, ${firstName} ${middleName}`.toUpperCase()
     const date = new Date(dob)
@@ -75,8 +76,8 @@ function handleSubmit() {
     document.getElementById("pobView").innerHTML=pob
     document.getElementById("addressView").innerHTML=address
     document.getElementById("bloodTypeView").innerHTML=bloodType
-    document.getElementById("eyeColorView").innerHTML=eyesColor
-
+    document.getElementById("eyeColorView").innerHTML=eyeColor
+    updateQRcode(`${firstName} ${middleName} ${lastName}`)
     toggleDetailsForm()
 }
 
@@ -139,6 +140,17 @@ function updateSubmitButton(){
     }
 }
 
+function updateQRcode(name){
+    // space = %20
+    // new line = %0A
+
+    const parsedData=`Hi my name is ${name}.`
+
+    console.log(parsedData)
+    qr=`https://barcode.orcascan.com/?type=qr&data=${parsedData}`;
+    barcode.setAttribute('src',qr);
+    
+}
 actualId.addEventListener("dblclick", toggleDetailsForm);
 
 cancelButton.addEventListener("click",toggleDetailsForm)

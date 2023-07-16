@@ -102,6 +102,9 @@ body {
 }
 .barcode{
     font-family: var(--font-barcode);
+    background: url("https://img.freepik.com/premium-vector/seamless-pattern-simulated-qr-code-background-banner-screen-saver-design_888684-1254.jpg?w=1800");
+    background-size: contain;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     text-align: center;
