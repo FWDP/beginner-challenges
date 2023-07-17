@@ -1,6 +1,11 @@
 /* Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Karla:wght@500&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
+
+
+
+
+
 :root {
     --debug: 2px solid black;
 
@@ -17,7 +22,7 @@
     --font-details:Inter;
 
     /* images */
-    --profile-picture: url("../assets/Yss.webp");
+    --profile-picture: url("https://media.licdn.com/dms/image/D5603AQExNmgonLxlHQ/profile-displayphoto-shrink_800_800/0/1683598618905?e=1695254400&v=beta&t=jFyQy3g7F9HFmjDC-A024HikoM1ID_ZAd6HWh4LVuq8");
     --flag: url("../assets/PHFlag.svg");
     --right-logo: url("../assets/CoatofArms.png");
     --philippines: url("../assets/ph.png")
@@ -32,7 +37,15 @@
 body {
     background-color: var(--blue-bg-color);
 }
-
+#blank{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.12);
+    z-index: 1;
+}
 
 .actualId{
     background: var(--philippines);
@@ -81,6 +94,7 @@ body {
 .profile{
     background: var(--profile-picture);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     border-radius: 10px;
     border: 1px solid var(--id-border);
@@ -89,6 +103,9 @@ body {
 }
 .barcode{
     font-family: var(--font-barcode);
+    background: url("https://img.freepik.com/premium-vector/seamless-pattern-simulated-qr-code-background-banner-screen-saver-design_888684-1254.jpg?w=1800");
+    background-size: contain;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -150,9 +167,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-80%);
+    /* animation: floatUp 3s ease-in 0 1 normal forwards; */
 }
 #actualId:hover{
-    transform: scale(1.05,1.05);
+    transform: scale(1.03,1.03);
     transition-duration: 0.25s;
     transition-timing-function: ease;
 }   

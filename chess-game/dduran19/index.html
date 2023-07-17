@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gridManager.css">
+    <link rel="stylesheet" href="css/chess.css">
+    <link rel="stylesheet" href="css/chessPieces.css">
+    <title>Chess Game</title>
+</head>
+<body>
+    <div class="chessBoard grid-container">
+        <div class="chessTile row-1 col-1 darkRook" id="cTile1-1"></div>
+        <div class="chessTile row-1 col-2 darkKnight" id="cTile1-2"></div>
+        <div class="chessTile row-1 col-3 darkBishop" id="cTile1-3"></div>
+        <div class="chessTile row-1 col-4 darkQueen" id="cTile1-4"></div>
+        <div class="chessTile row-1 col-5 darkKing" id="cTile1-5"></div>
+        <div class="chessTile row-1 col-6 darkBishop" id="cTile1-6"></div>
+        <div class="chessTile row-1 col-7 darkKnight" id="cTile1-7"></div>
+        <div class="chessTile row-1 col-8 darkPawn" id="cTile1-8"></div>
+        <div class="chessTile row-2 col-1 darkPawn" id="cTile2-1"></div>
+        <div class="chessTile row-2 col-2 darkPawn" id="cTile2-2"></div>
+        <div class="chessTile row-2 col-3 darkPawn" id="cTile2-3"></div>
+        <div class="chessTile row-2 col-4 darkPawn" id="cTile2-4"></div>
+        <div class="chessTile row-2 col-5 darkPawn" id="cTile2-5"></div>
+        <div class="chessTile row-2 col-6 darkPawn" id="cTile2-6"></div>
+        <div class="chessTile row-2 col-7 darkPawn" id="cTile2-7"></div>
+        <div class="chessTile row-2 col-8 darkPawn" id="cTile2-8"></div>
+        <div class="chessTile row-3 col-1" id="cTile3-1"></div>
+        <div class="chessTile row-3 col-2" id="cTile3-2"></div>
+        <div class="chessTile row-3 col-3" id="cTile3-3"></div>
+        <div class="chessTile row-3 col-4" id="cTile3-4"></div>
+        <div class="chessTile row-3 col-5" id="cTile3-5"></div>
+        <div class="chessTile row-3 col-6" id="cTile3-6"></div>
+        <div class="chessTile row-3 col-7" id="cTile3-7"></div>
+        <div class="chessTile row-3 col-8" id="cTile3-8"></div>
+        <div class="chessTile row-4 col-1" id="cTile4-1"></div>
+        <div class="chessTile row-4 col-2" id="cTile4-2"></div>
+        <div class="chessTile row-4 col-3" id="cTile4-3"></div>
+        <div class="chessTile row-4 col-4" id="cTile4-4"></div>
+        <div class="chessTile row-4 col-5" id="cTile4-5"></div>
+        <div class="chessTile row-4 col-6" id="cTile4-6"></div>
+        <div class="chessTile row-4 col-7" id="cTile4-7"></div>
+        <div class="chessTile row-4 col-8" id="cTile4-8"></div>
+        <div class="chessTile row-5 col-1" id="cTile5-1"></div>
+        <div class="chessTile row-5 col-2" id="cTile5-2"></div>
+        <div class="chessTile row-5 col-3" id="cTile5-3"></div>
+        <div class="chessTile row-5 col-4" id="cTile5-4"></div>
+        <div class="chessTile row-5 col-5" id="cTile5-5"></div>
+        <div class="chessTile row-5 col-6" id="cTile5-6"></div>
+        <div class="chessTile row-5 col-7" id="cTile5-7"></div>
+        <div class="chessTile row-5 col-8" id="cTile5-8"></div>
+        <div class="chessTile row-6 col-1" id="cTile6-1"></div>
+        <div class="chessTile row-6 col-2" id="cTile6-2"></div>
+        <div class="chessTile row-6 col-3" id="cTile6-3"></div>
+        <div class="chessTile row-6 col-4" id="cTile6-4"></div>
+        <div class="chessTile row-6 col-5" id="cTile6-5"></div>
+        <div class="chessTile row-6 col-6" id="cTile6-6"></div>
+        <div class="chessTile row-6 col-7" id="cTile6-7"></div>
+        <div class="chessTile row-6 col-8" id="cTile6-8"></div>
+        <div class="chessTile row-7 col-1 lightPawn" id="cTile7-1"></div>
+        <div class="chessTile row-7 col-2 lightPawn" id="cTile7-2"></div>
+        <div class="chessTile row-7 col-3 lightPawn" id="cTile7-3"></div>
+        <div class="chessTile row-7 col-4 lightPawn" id="cTile7-4"></div>
+        <div class="chessTile row-7 col-5 lightPawn" id="cTile7-5"></div>
+        <div class="chessTile row-7 col-6 lightPawn" id="cTile7-6"></div>
+        <div class="chessTile row-7 col-7 lightPawn" id="cTile7-7"></div>
+        <div class="chessTile row-7 col-8 lightPawn" id="cTile7-8"></div>
+        <div class="chessTile row-8 col-1 lightRook" id="cTile8-1"></div>
+        <div class="chessTile row-8 col-2 lightKnight" id="cTile8-2"></div>
+        <div class="chessTile row-8 col-3 lightBishop" id="cTile8-3"></div>
+        <div class="chessTile row-8 col-4 lightQueen" id="cTile8-4"></div>
+        <div class="chessTile row-8 col-5 lightKing" id="cTile8-5"></div>
+        <div class="chessTile row-8 col-6 lightBishop" id="cTile8-6"></div>
+        <div class="chessTile row-8 col-7 lightKnight" id="cTile8-7"></div>
+        <div class="chessTile row-8 col-8 lightRook" id="cTile8-8"></div>
+
+    </div>
+    <script src="js/chess.js"></script>
+</body>
+</html>

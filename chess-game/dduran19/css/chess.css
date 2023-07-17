@@ -1,0 +1,44 @@
+:root{
+    --chess-tile: 50px;
+    --chess-gap-color:rgb(88, 50, 6);
+    --chess-gap: 1px;
+    --chess-tile-dark:#b58763;
+    --chess-tile-selected: rgb(186, 255, 158);
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+.chessBoard{
+    border: var(--debug);
+    width: calc(var(--chess-tile+1)*8);
+    height: calc(var(--chess-tile+1)*8);
+}
+
+.chessTile{
+    border:1px solid var(--chess-gap-color);
+    width: var(--chess-tile);
+    height: var(--chess-tile);
+}
+
+#cTile1-1, #cTile1-3, #cTile1-5, #cTile1-7, #cTile2-2, #cTile2-4, #cTile2-6, #cTile2-8, #cTile3-1, #cTile3-3, #cTile3-5, #cTile3-7, #cTile4-2, #cTile4-4, #cTile4-6, #cTile4-8, #cTile5-1, #cTile5-3, #cTile5-5, #cTile5-7, #cTile6-2, #cTile6-4, #cTile6-6, #cTile6-8, #cTile7-1, #cTile7-3, #cTile7-5, #cTile7-7, #cTile8-2, #cTile8-4, #cTile8-6, #cTile8-8{
+	background-color: var(--chess-tile-dark)
+}
+
+.blackRook{
+    background: url("../assets/darkRook.svg") no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.selected{
+	background-color: var(--chess-tile-selected) !important
+
+}

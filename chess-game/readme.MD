@@ -39,7 +39,7 @@ You can use the following hex codes for your chess pieces (if you like)
 |♗|	\&#9815;|	White Bishop
 |♘|	\&#9816;|	White Knight
 |♙|	\&#9817;|	White Pawn
-|♚|	\&#9818;|	Black konge
+|♚|	\&#9818;|	Black King
 |♛|	\&#9819;|	Black Queen
 |♜|	\&#9820;|	Black Rook
 |♝|	\&#9821;|	Black Bishop
