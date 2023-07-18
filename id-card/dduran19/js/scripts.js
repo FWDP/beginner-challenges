@@ -6,6 +6,7 @@ const newDetailsForm = document.getElementById("newDetails");
 const submitButton = document.getElementById("submitButton");
 const cancelButton = document.getElementById("cancelButton");
 
+const downloadIdButton = document.getElementById("downloadIDButton")
 const barcode = document.getElementById("barcode");
 const firstNameField = document.getElementById("firstName");
 const middleNameField = document.getElementById("middleName");
@@ -47,6 +48,7 @@ function toggleDetailsForm() {
 
         blank.classList.toggle("hide");
     }
+    
     catch(error){
     console.log(error)
     }
@@ -100,7 +102,7 @@ function getFormValues() {
     const pob = pobField.value.toUpperCase()
     const address = addressField.value.toUpperCase()
     const bloodType = bloodTypeField.value
-    const eyesColor = eyesColorField.value.toUpperCase()
+    const eyeColor = eyesColorField.value.toUpperCase()
 
     return {
         firstName,
@@ -111,7 +113,7 @@ function getFormValues() {
         pob,
         address,
         bloodType,
-        eyesColor
+        eyeColor
     }
 }    
 
@@ -146,11 +148,32 @@ function updateQRcode(name){
     barcode.setAttribute('src',qr);
     
 }
+
+function handleIDDownload(){
+    console.log("I was called")
+    const testElement =document.getElementById("body")
+    html2canvas(actualId).then((canvas) => {
+        const link = document.createElement("a",{"allowTaint": true});
+        // document.body.appendChild(link);
+        link.onload = () => {
+            console.log("INSIDE ONLOAD")
+            link.download = "html_image.jpg";
+            link.href = canvas.toDataURL('image/png');
+            link.target = '_blank';
+            link.click();
+        }
+            
+        
+    })
+}
+
 actualId.addEventListener("dblclick", toggleDetailsForm);
 
 cancelButton.addEventListener("click",toggleDetailsForm)
 blank.addEventListener("click",toggleDetailsForm)
 submitButton.addEventListener("click",handleSubmit)
+downloadIdButton.addEventListener("click", handleIDDownload)
+
 
 firstNameField.addEventListener('change', updateSubmitButton)
 middleNameField.addEventListener('change', updateSubmitButton)
@@ -161,4 +184,6 @@ pobField.addEventListener('change', updateSubmitButton)
 addressField.addEventListener('change', updateSubmitButton)
 bloodTypeField.addEventListener('change', updateSubmitButton)
 eyesColorField.addEventListener('change', updateSubmitButton)
-profilePictureField.addEventListener('change', handlePictureUpload)});
+profilePictureField.addEventListener('change', handlePictureUpload)
+
+});
