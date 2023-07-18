@@ -105,10 +105,11 @@
                 <div class="ph"><img src="./assets/ph.png" alt="h"></div>
                 <div class="sun"><img src="./assets/sun.png" alt="sun"></div>
                <!-- FORM CARD INFO -->
-                <div class="formCardInfo" hidden>
+                <div class="formCardInfo" >
                     <div class="formName">
                         <div class="formhName">SURNAME, FIRST NAME, MIDDLE NAME</div>
-                        <div class="formfullName" id="fullName">DELA CRUZ, JUAN PEDRO</div>
+                        <!-- <div class="formfullName" id="fullName">DELA CRUZ, JUAN PEDRO</div> -->
+                        <input class="formbName" type="text" name="fName" id="Fullname" placeholder="Full Name">
                     </div>
                     <div class="formbirthInfo">
                         <div class="formhBirthInfo">
@@ -117,27 +118,52 @@
                             <div class="formhPob">PLACE OF BIRTH</div>
                             <div></div>
                         </div>     
-                        <div class="bBirthInfo">
-                            <div class="bDOB" id="dob">1990/01/01</div>
-                            <div class="bSex" id="sex">Male</div>
-                            <div class="bPOB" id="pob">Manila City</div>
+                        <div class="formbBirthInfo">
+                            <input type="date" name="birthday" id="fbday">
+                            <select name="Sex" id="fsex">
+                                <option value="empty"></option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <input class="fbBirthInfo" type="text" name="faddress" id="fadd" placeholder="Place of Birth">
                             <div></div>
                         </div>
                     </div>
-                    <div class="addInfo">
+                    <div class="formaddInfo">
                             <div class="hAddress">ADDRESS</div>
-                            <div class="bAddress" id="address">CEBU CITY</div>
+                            <!-- <div class="bAddress" id="address">CEBU CITY</div> -->
+                            <input class="formbAddress" type="text" name="formAdd" id="fAdd" placeholder="Address">
                     </div>
-                    <div class="otherInfo">
-                            <div class="hOtherInfo">
+                    <div class="formotherInfo">
+                            <div class="formhOtherInfo">
                                 <div class="hBloodType">BLOOD TYPE</div>
                                 <div class="hEyeColor">EYE COLOR</div>
                                 <div></div>
                                 <div></div>
                             </div>
-                            <div class="bOtherInfo">
-                                <div class="bBloodType" id="bloodType">O+</div>
-                                <div class="bEyeColor" id="eyeColor">Blue Eyes</div>
+                            <div class="formbOtherInfo">
+                                <!-- <div class="bBloodType" id="bloodType">O+</div> -->
+                                <select name="formBloodType" id="fBloodType">
+                                    <option value="empty"></option>
+                                    <option value="A+">A+</option>
+                                    <option value="B+">B+</option>
+                                    <option value="O+">O+</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B-">B-</option>
+                                    <option value="O-">O-</option>
+                                    <option value="AB-">AB-</option>
+                                </select>
+                                <!-- <div class="bEyeColor" id="eyeColor">Blue Eyes</div> -->
+                                <select name="feyeColor" id="fEyeColor">
+                                    <option value="empty"></option>
+                                    <option value="brown">Brown</option>
+                                    <option value="hazel">Hazel</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                    <option value="gray">Gray</option>
+                                    <option value="amber">Amber</option>
+                                </select>
                                 <div></div>
                             </div>
                     </div>
@@ -146,5 +172,6 @@
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>

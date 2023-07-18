@@ -132,37 +132,37 @@ header{
     
 }
 .hName{
-    font-size: 7px;
+    font-size: 10px;
 }
 .fullName{
-    font-size: 15px;
+    font-size: 20px;
 }
 .hBirthInfo{
-    font-size: 7px;
+    font-size: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .bBirthInfo{
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .hAddress{
-    font-size: 7px;
+    font-size: 10px;
 }
 .bAddress{
-    font-size: 15px;
+    font-size: 20px;
 }
 .hOtherInfo{
-    font-size: 7px;
+    font-size: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .bOtherInfo{
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -269,4 +269,71 @@ header{
     width: 150px;
     height: 30px;
  
+}
+.formCardInfo{
+    width: 280px;
+    height: 200px;
+    position: relative;
+    margin-top: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formhName{
+    font-size: 10px;
+}
+.formbName{
+    font-size: 15px;
+    opacity: 0.5;
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+.formhBirthInfo{
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.formbBirthInfo{
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0.7;
+    border: none;
+
+}
+.fbBirthInfo{
+    font-size: 10px;
+    opacity: 0.5;
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+.formhAddress{
+    font-size: 10px;
+}
+.formbAddress{
+    font-size: 15px;
+    opacity: 0.5;
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+.formhOtherInfo{
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.formbOtherInfo{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0.7;
+    border: none;
+
 }
