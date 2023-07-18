@@ -96,8 +96,8 @@ header{
 }
 .picture img{
     object-fit: cover;
-    max-width: 150px;
-    max-height: 190px;
+    width: 150px;
+    height: 150px;
 }
 .eSignature img{
     object-fit: cover;
