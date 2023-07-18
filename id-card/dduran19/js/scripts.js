@@ -164,8 +164,6 @@ function updateQRcode(name){
 
 async function handleIDDownload(){
     actualId.classList.toggle("shadow");
-    // const body = document.getElementById("body")
-    // body.classList.toggle("plain");
     await html2canvas(actualId,  {
         "windowWidth": actualId.scrollWidth,
         "windowHeight": actualId.scrollHeight,
@@ -187,8 +185,7 @@ async function handleIDDownload(){
         catch(error) {
         console.error(error)
         }
-    // body.classList.toggle("plain");
-    // actualId.classList.toggle("shadow");
+    actualId.classList.toggle("shadow");
         
     })
 }
