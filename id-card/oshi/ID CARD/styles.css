@@ -18,6 +18,11 @@ body{
     z-index: 1;
     overflow: hidden;
 }
+.card:hover{
+    cursor: pointer;
+    transition:.5s ease all ;
+    filter: brightness(.9) saturate(1.2);
+}
 .ph img{
     position: absolute;
     width: 250px;
@@ -172,9 +177,23 @@ header{
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 10px;
-
+}
+.formBodyFrame>button{
+    font-size: 20px;
+    width: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    background-color: cyan;
+    
+}
+.formBodyFrame>button:hover{
+    cursor: pointer;
+    opacity: 0.5;
 }
 .formCard{
+    display: none;
     width: 500px;
     height: 300px;
     padding: 20px 30px 30px 30px;
@@ -185,11 +204,14 @@ header{
     -webkit-box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
     -moz-box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
     position: absolute;
-    top: 75%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    
+    z-index: 2;
+}
+.show{
+    display: block
 }
 .formPictureFrame{
     margin-top: 80px;
@@ -280,6 +302,8 @@ header{
     flex-direction: column;
     justify-content: space-between;
 }
+
+
 .formhName{
     font-size: 10px;
 }

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ID CARD</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="show.css">
 </head>
 <body>
-    <div class="card" >   
+    <div class="card" id="card"> 
         <header>
             <div class="flag"><img src="./assets/logo1.png" alt="flag" ></div>
             <div class="nameCard">
@@ -19,8 +20,8 @@
         <div class="bodyFrame">
             <div class="userFrame">
                 <div class="pictureFrame">
-                    <div class="picture"><img src="./assets/pic1.png" alt="pic"></div>
-                    <div class="eSignature"><img src="./assets/e-sig.png" alt="eSig"></div>
+                    <div class="picture"><img src="./assets/pic1.png" alt="pic" id="userPic"></div>
+                    <div class="eSignature"><img src="./assets/e-sig.png" alt="eSig" id="userESig"></div>
                     <div class="signature">SIGNATURE</div>
                     <div class="barCode"><img src="./assets/br.png" alt="barcode"></div>
                 </div>
@@ -69,107 +70,111 @@
             </div>
         </div>
     </div>
-    <div class="formCard">
-        <!-- HEADER INFO -->
-        <header>
-            <div class="flag"><img src="./assets/logo1.png" alt="flag" ></div>
-            <div class="nameCard">
-                <h3 class="rop">REPBULIC OF THE PHILIPPINES</h3>
-                <h1 class="fID">FWDP IDENTIFICATION</h1>
-            </div>
-            <div class="republic"><img src="./assets/logo2.png" alt="republic" ></div> 
-        </header>
-        <!-- BODY FRAME -->
-        <div class="formBodyFrame">
-            <!-- FORM USER UPLOAD PICTURE -->
-            <div class="formUserFrame">
-                <div class="formPictureFrame">
-                    <div class="imgIcon">
-                        <label for="file-input">
-                            <img src="./assets/image.svg" alt="imageIcon">
-                            <h4 class="hiddenText">Upload Image</h4>
-                        </label> 
-                          <input id="file-input" type="file"> 
-                    </div>
-                    <div class="e-sigIcon">
-                        <label for="sig-input">
-                            <img src="./assets/signature.svg" alt="esigIcon">
-                            <h5 class="hiddenesig">click to upload e-signature</h5>
-                          </label> 
-                          <input id="sig-input" type="file"> 
-                    </div>
-                    <div class="formSignature">SIGNATURE</div>
-                    <div class="formBarCode"><img src="./assets/br.png" alt="barcode"></div>
+    <div class="toggleForm">
+        <div class="formCard" id="formCard">
+            <!-- HEADER INFO -->
+            <header>
+                <div class="flag"><img src="./assets/logo1.png" alt="flag" ></div>
+                <div class="nameCard">
+                    <h3 class="rop">REPBULIC OF THE PHILIPPINES</h3>
+                    <h1 class="fID">FWDP IDENTIFICATION</h1>
                 </div>
-            </div>
-                <div class="ph"><img src="./assets/ph.png" alt="h"></div>
-                <div class="sun"><img src="./assets/sun.png" alt="sun"></div>
-               <!-- FORM CARD INFO -->
-                <div class="formCardInfo" >
-                    <div class="formName">
-                        <div class="formhName">SURNAME, FIRST NAME, MIDDLE NAME</div>
-                        <!-- <div class="formfullName" id="fullName">DELA CRUZ, JUAN PEDRO</div> -->
-                        <input class="formbName" type="text" name="fName" id="Fullname" placeholder="Full Name">
-                    </div>
-                    <div class="formbirthInfo">
-                        <div class="formhBirthInfo">
-                            <div class="formhDob">DATE OF BIRTH</div>
-                            <div class="formhSex">SEX</div>
-                            <div class="formhPob">PLACE OF BIRTH</div>
-                            <div></div>
-                        </div>     
-                        <div class="formbBirthInfo">
-                            <input type="date" name="birthday" id="fbday">
-                            <select name="Sex" id="fsex">
-                                <option value="empty"></option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                            <input class="fbBirthInfo" type="text" name="faddress" id="fadd" placeholder="Place of Birth">
-                            <div></div>
+                <div class="republic"><img src="./assets/logo2.png" alt="republic" ></div> 
+            </header>
+            <!-- BODY FRAME -->
+         <form class="formBodyFrame">
+                <!-- FORM USER UPLOAD PICTURE -->
+                <div class="formUserFrame">
+                    <div class="formPictureFrame">
+                        <div class="imgIcon">
+                            <label for="file-input">
+                                <img src="./assets/image.svg" alt="imageIcon">
+                                <h4 class="hiddenText">Upload Image</h4>
+                            </label> 
+                              <input id="file-input" type="file" > 
                         </div>
+                        <div class="e-sigIcon">
+                            <label for="sig-input">
+                                <img src="./assets/signature.svg" alt="esigIcon">
+                                <h5 class="hiddenesig">click to upload e-signature</h5>
+                              </label> 
+                              <input id="sig-input" type="file" > 
+                        </div>
+                        <div class="formSignature">SIGNATURE</div>
+                        <div class="formBarCode"><img src="./assets/br.png" alt="barcode"></div>
                     </div>
-                    <div class="formaddInfo">
-                            <div class="hAddress">ADDRESS</div>
-                            <!-- <div class="bAddress" id="address">CEBU CITY</div> -->
-                            <input class="formbAddress" type="text" name="formAdd" id="fAdd" placeholder="Address">
-                    </div>
-                    <div class="formotherInfo">
-                            <div class="formhOtherInfo">
-                                <div class="hBloodType">BLOOD TYPE</div>
-                                <div class="hEyeColor">EYE COLOR</div>
+                 </div>
+                    <div class="ph"><img src="./assets/ph.png" alt="h"></div>
+                    <div class="sun"><img src="./assets/sun.png" alt="sun"></div>
+                   <!-- FORM CARD INFO -->
+                    <div class="formCardInfo" >
+                        <div class="formName">
+                            <div class="formhName">SURNAME, FIRST NAME, MIDDLE NAME</div>
+                            <!-- <div class="formfullName" id="fullName">DELA CRUZ, JUAN PEDRO</div> -->
+                            <input class="formbName" type="text" name="fName" id="Fullname" placeholder="Full Name" required >
+                        </div>
+                        <div class="formbirthInfo">
+                            <div class="formhBirthInfo">
+                                <div class="formhDob">DATE OF BIRTH</div>
+                                <div class="formhSex">SEX</div>
+                                <div class="formhPob">PLACE OF BIRTH</div>
                                 <div></div>
+                            </div>     
+                            <div class="formbBirthInfo">
+                                <input type="date" name="birthday" id="fbday" >
+                                <select name="Sex" id="fsex" required>
+                                    <option value="empty"></option>
+                                    <option value="Male">MALE</option>
+                                    <option value="Female">FEMALE</option>
+                                </select>
+                                <input class="fbBirthInfo" type="text" name="faddress" id="fadd" placeholder="Place of Birth" required>
                                 <div></div>
                             </div>
-                            <div class="formbOtherInfo">
-                                <!-- <div class="bBloodType" id="bloodType">O+</div> -->
-                                <select name="formBloodType" id="fBloodType">
-                                    <option value="empty"></option>
-                                    <option value="A+">A+</option>
-                                    <option value="B+">B+</option>
-                                    <option value="O+">O+</option>
-                                    <option value="AB+">AB+</option>
-                                    <option value="A-">A-</option>
-                                    <option value="B-">B-</option>
-                                    <option value="O-">O-</option>
-                                    <option value="AB-">AB-</option>
-                                </select>
-                                <!-- <div class="bEyeColor" id="eyeColor">Blue Eyes</div> -->
-                                <select name="feyeColor" id="fEyeColor">
-                                    <option value="empty"></option>
-                                    <option value="brown">Brown</option>
-                                    <option value="hazel">Hazel</option>
-                                    <option value="blue">Blue</option>
-                                    <option value="green">Green</option>
-                                    <option value="gray">Gray</option>
-                                    <option value="amber">Amber</option>
-                                </select>
-                                <div></div>
-                            </div>
+                        </div>
+                        <div class="formaddInfo">
+                                <div class="hAddress">ADDRESS</div>
+                                <!-- <div class="bAddress" id="address">CEBU CITY</div> -->
+                                <input class="formbAddress" type="text" name="formAdd" id="faddress" placeholder="Address" required>
+                        </div>
+                        <div class="formotherInfo">
+                                <div class="formhOtherInfo" >
+                                    <div class="hBloodType">BLOOD TYPE</div>
+                                    <div class="hEyeColor">EYE COLOR</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="formbOtherInfo">
+                                    <!-- <div class="bBloodType" id="bloodType">O+</div> -->
+                                    <select name="formBloodType" id="fbloodType" required>
+                                        <option value="empty"></option>
+                                        <option value="A+">A+</option>
+                                        <option value="B+">B+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B-">B-</option>
+                                        <option value="O-">O-</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                    <!-- <div class="bEyeColor" id="eyeColor">Blue Eyes</div> -->
+                                    <select name="feyeColor" id="feyeColor" required>
+                                        <option value="empty"></option>
+                                        <option value="Black">Black</option>
+                                        <option value="Brown">Brown</option>
+                                        <option value="Hazel">Hazel</option>
+                                        <option value="Blue">Blue</option>
+                                        <option value="Green">Green</option>
+                                        <option value="Gray">Gray</option>
+                                        <option value="Amber">Amber</option>
+                                    </select>
+                                    <div></div>
+                                </div>
+                        </div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div></div>
-                    <div></div>
-            </div>
+                    <button type="submit" id="update">Update</button>
+            </form>
         </div>
     </div>
     <script src="./script.js"></script>
