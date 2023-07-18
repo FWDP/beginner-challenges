@@ -73,3 +73,6 @@
     box-shadow:  var(--shadow);
     margin-top: 50px;
 }
+.plain{
+    background-color: white;
+}

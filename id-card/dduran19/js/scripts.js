@@ -131,7 +131,8 @@ function updateSubmitButton(){
         formValues.pob,
         formValues.address,
         formValues.bloodType,
-        formValues.eyesColor];
+        formValues.eyeColor];
+    console.log(formValues);
     const valid = requiredFormValues.every(formValue =>!!formValue);
 
     if (valid){
@@ -151,8 +152,9 @@ function updateQRcode(name){
 
 async function handleIDDownload(){
     actualId.classList.toggle("shadow");
-    const testElement =document.getElementById("body")
-    await html2canvas(testElement,  {
+    const body = document.getElementById("body")
+    body.classList.toggle("plain");
+    await html2canvas(body,  {
         "windowWidth": actualId.scrollWidth,
         "windowHeight": actualId.scrollHeight,
         "removeContainer": false,
@@ -173,7 +175,8 @@ async function handleIDDownload(){
         catch(error) {
         console.error(error)
         }
-        actualId.classList.toggle("shadow");
+    body.classList.toggle("plain");
+    actualId.classList.toggle("shadow");
         
     })
 }
