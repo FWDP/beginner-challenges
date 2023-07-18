@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National ID</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="./index.js"></script>
 </head>
 <body>
 <div class="container">
@@ -14,33 +15,44 @@
         <h4>FWDP INDENTIFICATION</h4></div>
         <img class="img1" src="images/ph logo.png"></img>
     </div>
-    <div class="image">
+    <div class="image"> 
+        <img  class="picture" src="images/portriat.png"></img>
     </div>
     
-    <div class="qrcode"></div>
+    <div class="sign"> 
+        <img class="signature" src="images/signature.png"></img>
+
+    </div>
+    <div class="qrcode"> 
+          <img class="code" src="images\barcode.png"></img>  
+    </div>
     <div class="info">
         <div class="name">
             <p>SURNAME, &nbsp;FIRST NAME,&nbsp; MIDDLE NAME</p>
-            <h4>DELA CRUZ,&nbsp;&nbsp; JUAN PEDRO&nbsp; PAINDOKO</h4>
+             <h4 id="fullname">Juan, Dela Cruz </h4>
         </div>
         <div class="DOB">
-            <p>DATE OF BIRTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SEX &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLACE OF BIRTH</p>
-            <h4>1990/01/01&nbsp;&nbsp; &nbsp; M&nbsp;&nbsp;&nbsp; MANILA</h4>
+                <p>DATE OF BIRTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SEX &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLACE OF BIRTH</p>
+            <div class="DOB-container">   
+                <h4 id ="dob">1990/01/01</h4> 
+                <h4 id="gender"> M </h4>
+                <h4 id="pob">MANILA</h4>
+            </div>
         </div>
         <div class="address">
             <p>ADDRESS</p>
-            <h4>ROXAS BLVD  ERMITA, ZONE 72, MANILA, 1000 METRO MANILA</h4>
+            <h4 id="def-address">ROXAS BLVD  ERMITA, ZONE 72, MANILA, 1000 METRO MANILA</h4>
         </div>
         <div class="blood">
             <p>BLOOD TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  EYES COLOR</p>
-            <h4>A+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  BROWN</h4>
+            <div class="blood-container">
+                <h4 id="blood">A+</h4>
+                <h4 id="eye">BROWN</h4>
+            </div>
         </div>
     </div>
 </div>
-<!--
-    
-    SEX
-    
+ 
     <div class="container-form">
     <form>
         <label for="full-name" class="full-name">FULLNAME</label>
@@ -50,7 +62,7 @@
         <label for="sex" class="sex"class="sex">GENDER</label>
         <input type="text" id="sex" name="sex" pattern="[A-Za-z]" title="Type M for 'male' and F for'FEMALE" !required>
         <label for="bod" class="bod">BIRTH OF PLACE</label>
-        <input type="text" id="bod" name="bod" placeholder="Street/Brgy/City/Province" !required>
+         <input type="text" id="bod" name="bod" placeholder="Street/Brgy/City/Province" !required>
         <label for="address" class="address">ADDRESS</label>
         <input type="text" id="address" name="address" placeholder="Street/Brgy/City/Province" !required>
         <label for="bloodtype" class="bloodtype">BLOODTYPE</label>
@@ -58,9 +70,10 @@
         <label for="eye-color" class="eye-color">EYE COLOR</label>
         <input type="text" name="eye-color" id="eye-color" placeholder="Enter your Eye-color" !required>
         <label for="img">Upload Image</label>
-        <input type="file" id="img" name="img" accept="image/*">
-        <input type="submit" id="submit" value="submit" style="grid-column: 1 / 3;"> 
+        <input type="file" id="img" name="img" accept="image/*">    
+        <button id="button" style="grid-column: 1 / 3;">SUBMIT</button>
     </form>
 </div>
+
 </body>
 </html>
