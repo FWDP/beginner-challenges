@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID CARD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card" >   
+        <header>
+            <div class="flag"><img src="./assets/logo1.png" alt="flag" ></div>
+            <div class="nameCard">
+                <h3 class="rop">REPBULIC OF THE PHILIPPINES</h3>
+                <h1 class="fID">FWDP IDENTIFICATION</h1>
+            </div>
+            <div class="republic"><img src="./assets/logo2.png" alt="republic" ></div> 
+        </header>
+        <div class="bodyFrame">
+            <div class="userFrame">
+                <div class="pictureFrame">
+                    <div class="picture"><img src="./assets/pic1.png" alt="pic"></div>
+                    <div class="eSignature"><img src="./assets/e-sig.png" alt="eSig"></div>
+                    <div class="signature">SIGNATURE</div>
+                    <div class="barCode"><img src="./assets/br.png" alt="barcode"></div>
+                </div>
+            </div>
+            <div class="ph"><img src="./assets/ph.png" alt="h"></div>
+            <div class="sun"><img src="./assets/sun.png" alt="sun"></div>
+            <div class="cardInfo">
+                
+                <div class="name">
+                    <div class="hName">SURNAME, FIRST NAME, MIDDLE NAME</div>
+                    <div class="fullName" id="fullName">DELA CRUZ, JUAN PEDRO</div>
+                </div>
+                <div class="birthInfo">
+                    <div class="hBirthInfo">
+                        <div class="hDob">DATE OF BIRTH</div>
+                        <div class="hSex">SEX</div>
+                        <div class="hPob">PLACE OF BIRTH</div>
+                        <div></div>
+                    </div>     
+                    <div class="bBirthInfo">
+                        <div class="bDOB" id="dob">1990/01/01</div>
+                        <div class="bSex" id="sex">Male</div>
+                        <div class="bPOB" id="pob">Manila City</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="addInfo">
+                        <div class="hAddress">ADDRESS</div>
+                        <div class="bAddress" id="address">CEBU CITY</div>
+                </div>
+                <div class="otherInfo">
+                        <div class="hOtherInfo">
+                            <div class="hBloodType">BLOOD TYPE</div>
+                            <div class="hEyeColor">EYE COLOR</div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="bOtherInfo">
+                            <div class="bBloodType" id="bloodType">O+</div>
+                            <div class="bEyeColor" id="eyeColor">Blue Eyes</div>
+                            <div></div>
+                        </div>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="formCard">
+        <!-- HEADER INFO -->
+        <header>
+            <div class="flag"><img src="./assets/logo1.png" alt="flag" ></div>
+            <div class="nameCard">
+                <h3 class="rop">REPBULIC OF THE PHILIPPINES</h3>
+                <h1 class="fID">FWDP IDENTIFICATION</h1>
+            </div>
+            <div class="republic"><img src="./assets/logo2.png" alt="republic" ></div> 
+        </header>
+        <!-- BODY FRAME -->
+        <div class="formBodyFrame">
+            <!-- FORM USER UPLOAD PICTURE -->
+            <div class="formUserFrame">
+                <div class="formPictureFrame">
+                    <div class="imgIcon">
+                        <label for="file-input">
+                            <img src="./assets/image.svg" alt="imageIcon">
+                            <h4 class="hiddenText">Upload Image</h4>
+                        </label> 
+                          <input id="file-input" type="file"> 
+                    </div>
+                    <div class="e-sigIcon">
+                        <label for="sig-input">
+                            <img src="./assets/signature.svg" alt="esigIcon">
+                            <h5 class="hiddenesig">click to upload e-signature</h5>
+                          </label> 
+                          <input id="sig-input" type="file"> 
+                    </div>
+                    <div class="formSignature">SIGNATURE</div>
+                    <div class="formBarCode"><img src="./assets/br.png" alt="barcode"></div>
+                </div>
+            </div>
+                <div class="ph"><img src="./assets/ph.png" alt="h"></div>
+                <div class="sun"><img src="./assets/sun.png" alt="sun"></div>
+               <!-- FORM CARD INFO -->
+                <div class="formCardInfo" hidden>
+                    <div class="formName">
+                        <div class="formhName">SURNAME, FIRST NAME, MIDDLE NAME</div>
+                        <div class="formfullName" id="fullName">DELA CRUZ, JUAN PEDRO</div>
+                    </div>
+                    <div class="formbirthInfo">
+                        <div class="formhBirthInfo">
+                            <div class="formhDob">DATE OF BIRTH</div>
+                            <div class="formhSex">SEX</div>
+                            <div class="formhPob">PLACE OF BIRTH</div>
+                            <div></div>
+                        </div>     
+                        <div class="bBirthInfo">
+                            <div class="bDOB" id="dob">1990/01/01</div>
+                            <div class="bSex" id="sex">Male</div>
+                            <div class="bPOB" id="pob">Manila City</div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="addInfo">
+                            <div class="hAddress">ADDRESS</div>
+                            <div class="bAddress" id="address">CEBU CITY</div>
+                    </div>
+                    <div class="otherInfo">
+                            <div class="hOtherInfo">
+                                <div class="hBloodType">BLOOD TYPE</div>
+                                <div class="hEyeColor">EYE COLOR</div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="bOtherInfo">
+                                <div class="bBloodType" id="bloodType">O+</div>
+                                <div class="bEyeColor" id="eyeColor">Blue Eyes</div>
+                                <div></div>
+                            </div>
+                    </div>
+                    <div></div>
+                    <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+body{
+    background: linear-gradient(135deg,rgb(2, 124, 180),cyan);
+}
+.card{
+    width: 500px;
+    height: 300px;
+    padding: 20px 30px 30px 30px;
+    border: 1px solid black;
+    background:linear-gradient(90deg,rgb(187, 255, 255), rgb(169, 242, 255));
+    border-radius: 30px;
+    box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
+    -webkit-box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
+    -moz-box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow: hidden;
+}
+.ph img{
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    top: 5%;
+    left: 30%;
+    object-fit: cover;
+    z-index: -1;
+    mix-blend-mode: screen;
+    overflow: hidden;
+}
+.sun img{
+    width:250px;
+    height: auto;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    object-fit: cover;
+    top: 50%;
+    left: 70%;
+}
+header{
+    width: 500px;
+    height: 60px;
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    
+}
+.flag img{
+    object-fit: cover;
+    width: 110px;
+    height: 60px;
+}
+.republic img{
+    object-fit: cover;
+    width: 50px;
+    height: 60px;
+}
+.nameCard{
+    width: 70%;
+    height: 60px;
+
+    padding: 0;
+}
+.rop{
+
+    font-size: 10px;
+    position: relative;
+    text-align: center;
+}
+.fID{
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+.pictureFrame{
+    margin-top: 80px;
+    width: 150px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.picture img{
+    object-fit: cover;
+    max-width: 150px;
+    max-height: 190px;
+}
+.eSignature img{
+    object-fit: cover;
+    width: 150px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.signature{
+    font-size: 10px;
+    width: 150px;
+    height: 10px;
+    text-align: center;
+    position: relative;
+}
+.barCode img{
+    margin-top: 5px;
+    text-align: center;  
+    width: 150px;
+    height: 30px;
+ 
+}
+.bodyFrame{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+.cardInfo{
+    width: 280px;
+    height: 200px;
+    position: relative;
+    margin-top: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.hName{
+    font-size: 7px;
+}
+.fullName{
+    font-size: 15px;
+}
+.hBirthInfo{
+    font-size: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bBirthInfo{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hAddress{
+    font-size: 7px;
+}
+.bAddress{
+    font-size: 15px;
+}
+.hOtherInfo{
+    font-size: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bOtherInfo{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.formBodyFrame{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+}
+.formCard{
+    width: 500px;
+    height: 300px;
+    padding: 20px 30px 30px 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background:linear-gradient(90deg,rgb(187, 255, 255), rgb(169, 242, 255));
+    box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
+    -webkit-box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
+    -moz-box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.78);
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    
+}
+.formPictureFrame{
+    margin-top: 80px;
+    width: 150px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.imgIcon{
+
+    position: relative;
+}
+.imgIcon>input{
+    display: none;
+}
+.imgIcon>label:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.hiddenText{
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.imgIcon>label:hover h4{
+    visibility: visible;
+    opacity: 0.7; 
+}
+.e-sigIcon{
+    text-align: center;
+    object-fit: cover;
+    width: 150px;
+    height: 25px;
+    margin-bottom: 15px;
+}
+.e-sigIcon>input{
+    display: none;
+}
+.e-sigIcon>label:hover img{
+    cursor: pointer;
+    opacity: 0;
+}
+.hiddenesig{
+    position: absolute;
+    top: 250px;
+    left: 35px;
+    color: rgb(45, 0, 87);
+    opacity: 0; 
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.e-sigIcon>label:hover h5{
+    visibility: visible;
+    opacity: 0.7; 
+}
+.formSignature{
+    font-size: 10px;
+    width: 150px;
+    height: 10px;
+    text-align: center;
+    position: relative;
+}
+.formBarCode img{
+    margin-top: 10px;
+    text-align: center;  
+    width: 150px;
+    height: 30px;
+ 
+}
