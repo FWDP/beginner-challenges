@@ -24,6 +24,7 @@
     /* images */
     --profile-picture: url("../assets/defaultPicture.jpg");
     --id-bg-image: url("../assets/actualId.png");
+    --upload-icon: url("../assets/uploadIcon.svg");
 }
 
 *{
@@ -80,20 +81,16 @@ body {
     border: 1px solid var(--id-border);
     width: 100%;
     height: 100%;
+    margin-left: 20px;
 }
 .barcode{
-    display: flex;
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    width: 51px;
+    height: 51px;
     font-size: 30px;
-    margin-top: 3px;
-    margin-left: -3px;
+    margin-top: 5px;
+    margin-left: 64px;
 }
-.barcodeContainer{
-    display: flex;
-}
-
 .republic {
     padding-top: 15px;
 }
@@ -132,9 +129,6 @@ body {
 .pt-13{
     margin-top:13px;
 }
-.ml-20{
-    margin-left: 20px;
-}
 
 .data {
     font-size: 15px; 
@@ -147,7 +141,7 @@ body {
     margin-top: 50px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-80%);
+    transform: translate(-50%,-50%);
     /* animation: floatUp 3s ease-in 0 1 normal forwards; */
 }
 #actualId:hover{

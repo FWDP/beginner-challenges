@@ -29,7 +29,6 @@
             <div class="desc newDetailLabel col-1 row-7">Home Address</div>
             <div class="desc newDetailLabel col-1 row-8">Blood Type</div>
             <div class="desc newDetailLabel col-1 row-9">Eye Color</div>
-            <div class="desc newDetailLabel col-1 row-10">Id Picture</div>
 
             <input class="col-2 row-1" type="text" name="firstName" id="firstName" placeholder="First Name" required autocomplete/>
             <input class="col-2 row-2" type="text" name="middleName" id="middleName" placeholder="Middle Name" autocomplete/>
@@ -59,17 +58,23 @@
                 <option value="Gray">Gray</option>
                 <option value="Green">Green</option>
                 <option value="Hazel">Hazel</option>
-            </select>  
-            <input class="row-10 col-2" type="file" name="profilePicture" id="profilePicture" accept=".jpg, .png, .svg" required>
+            </select> 
+            <div data-html2canvas-ignore class="profilePictureContainer row-10 col-1-3" id="profilePictureContainer">
+                <img src="assets/uploadIcon.svg" alt="Upload Icon" class="uploadIcon" id="uploadIcon">
+                Drag & Drop your profile Picture or<br><span class="uploadText">Click here</span>.
+                <span class="uploadButton" >
+                    <input type="file" name="profilePicture" id="profilePicture" accept=".jpg, .png, .svg" required></span>
+                 
+            </div> 
             <input class="submitButton formButton row-11" disabled id="submitButton" type="button" value="Submit">
             <input class="cancelButton formButton row-12" id="cancelButton" type="button" value="Cancel">
         </form>
     </div>
     <div class="actualId grid-container shadow" id="actualId">
         <img class="profile ml-20 row-2-10 col-1-2" id="profilePictureView">
-        <div class="barcode ml-20 row-10-11 col-1">
-        <img class="barcode" id="barcode" src="https://barcode.orcascan.com/?type=qr&data=Hi%20my%20name%20is%20Denver%20James%20Espiritu%20Duran." alt="barcode">
-    </div>
+
+        <img class="barcode ml-20 row-10-11 col-1" id="barcode" src="https://barcode.orcascan.com/?type=qr&data=Hi%20my%20name%20is%20Denver%20James%20Espiritu%20Duran." alt="barcode">
+
         <div class="small centered-text republic row-1 col-1-8">
             REPUBLIC OF THE PHILIPPINES
         </div>

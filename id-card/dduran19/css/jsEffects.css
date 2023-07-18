@@ -1,21 +1,21 @@
 /* Animations */
 @keyframes floatUp{
     from{
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-30%);
         filter: blur(0.8rem);
     }
     to{
-        transform: translate(-50%,-80%);
+        transform: translate(-50%,-50%);
         filter: blur(0);
     }
 }
 
 @keyframes floatDown{
     from{
-        transform: translate(-50%,-80%);
+        transform: translate(-50%,-50%);
     }
     to{
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-30%);
     }
     
 }
@@ -76,3 +76,7 @@
 .plain{
     background-color: white;
 }
+
+.profilePictureContainer.highlight{
+    border: 5px dashed purple;
+  }

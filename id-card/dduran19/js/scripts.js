@@ -5,6 +5,7 @@ const actualForm=document.getElementById("actualForm");
 const newDetailsForm = document.getElementById("newDetails");
 const submitButton = document.getElementById("submitButton");
 const cancelButton = document.getElementById("cancelButton");
+const profilePictureContainer = document.getElementById("profilePictureContainer");
 
 const downloadIdButton = document.getElementById("downloadIDButton")
 const barcode = document.getElementById("barcode");
@@ -44,8 +45,9 @@ function toggleDetailsForm() {
             newDetailsForm.classList.add("hide");
 
         }
-
-
+        const url = window.getComputedStyle(document.body).getPropertyValue('--upload-icon')
+        const extractedLink = url.match(/"([^"]+)"/)[1].replace('../', '');
+        setUploadIcon(extractedLink);
         blank.classList.toggle("hide");
     }
     
@@ -85,13 +87,23 @@ function handleSubmit() {
 }
 
 function handlePictureUpload(event) {
-    const picture = event.target.files[0];
+    let picture;
+    if(event.dataTransfer.files)
+     {picture = event.dataTransfer.files[0] }else{picture = event.target.files[0];} 
     let pictureReader = new FileReader;
     pictureReader.readAsDataURL(picture);
     pictureReader.onload = () => {
         PROFILEPICTUREIMAGE=pictureReader.result
+        setUploadIcon(PROFILEPICTUREIMAGE)
     };
+    console.log(pictureReader)
 }
+
+function setUploadIcon(src) {
+    const uploadIcon = document.getElementById("uploadIcon");
+    uploadIcon.setAttribute("src",src)
+}
+
 
 function getFormValues() {
     const firstName = firstNameField.value
@@ -152,9 +164,9 @@ function updateQRcode(name){
 
 async function handleIDDownload(){
     actualId.classList.toggle("shadow");
-    const body = document.getElementById("body")
-    body.classList.toggle("plain");
-    await html2canvas(body,  {
+    // const body = document.getElementById("body")
+    // body.classList.toggle("plain");
+    await html2canvas(actualId,  {
         "windowWidth": actualId.scrollWidth,
         "windowHeight": actualId.scrollHeight,
         "removeContainer": false,
@@ -175,14 +187,13 @@ async function handleIDDownload(){
         catch(error) {
         console.error(error)
         }
-    body.classList.toggle("plain");
-    actualId.classList.toggle("shadow");
+    // body.classList.toggle("plain");
+    // actualId.classList.toggle("shadow");
         
     })
 }
 
 actualId.addEventListener("dblclick", toggleDetailsForm);
-
 cancelButton.addEventListener("click",toggleDetailsForm)
 blank.addEventListener("click",toggleDetailsForm)
 submitButton.addEventListener("click",handleSubmit)
@@ -199,5 +210,59 @@ addressField.addEventListener('change', updateSubmitButton)
 bloodTypeField.addEventListener('change', updateSubmitButton)
 eyesColorField.addEventListener('change', updateSubmitButton)
 profilePictureField.addEventListener('change', handlePictureUpload)
+
+// Upload logic
+function preventDefaults (e) {
+    e.preventDefault()
+    e.stopPropagation()
+  }
+function dragOver(e){
+    preventDefaults(e)
+    highlight()
+}
+function dragEnter(e){
+    preventDefaults(e)
+    unhighlight()
+
+}
+function dragLeave(e){
+    preventDefaults(e)
+    unhighlight()
+}
+function drop(e){
+    preventDefaults(e)
+    
+    const file = e.dataTransfer.files
+    handlePictureUpload(e)
+}
+
+function highlight(){
+    profilePictureContainer.classList.contains('highlight')?
+        null : profilePictureContainer.classList.add('highlight')}
+
+function unhighlight(){
+    profilePictureContainer.classList.contains('highlight')?
+        profilePictureContainer.classList.remove('highlight'): null}
+
+profilePictureContainer.addEventListener('dragover', dragOver)
+profilePictureContainer.addEventListener('dragenter', dragEnter)
+profilePictureContainer.addEventListener('dragleave', dragLeave)
+profilePictureContainer.addEventListener('drop', drop)
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
