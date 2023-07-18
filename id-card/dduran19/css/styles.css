@@ -36,6 +36,7 @@
 
 body {
     background-color: var(--blue-bg-color);
+    display:grid;
 }
 #blank{
     position: absolute;
@@ -174,3 +175,32 @@ body {
     transition-duration: 0.25s;
     transition-timing-function: ease;
 }   
+.Button {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 40px;
+    width: max-content;
+    justify-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  
+  .Button:hover {
+    background-color: #45a049;
+  }
+  
+  .Button:focus {
+    outline: none;
+  }
+  
+  
