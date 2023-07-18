@@ -18,13 +18,21 @@ const formEyeColor = document.getElementById('feyeColor')
 const userPicture = document.getElementById('userPic');
 const userESignature = document.getElementById('userESig');
 const fileInput = document.getElementById('file-input');
-const sigInput = document.getElementById('sig-input')
+const sigInput = document.getElementById('sig-input');
+const cancel = document.getElementById('cancel');
 
 function toggleFormID(){
-    formCard.classList.toggle("show");
+    formCard.classList.toggle("show"); 
+    card.classList.toggle("hide");
+}
+function cancelFormID(){
+    formCard.classList.toggle("hide");
+    card.classList.toggle("show");
 }
 
 card.addEventListener('click', toggleFormID); 
+cancel.addEventListener('click', cancelFormID);
+
 updateForm.addEventListener('click', (event)=>{
     event.preventDefault();
     userName.textContent = formName.value
@@ -57,3 +65,5 @@ updateForm.addEventListener('click', (event)=>{
         reader.readAsDataURL(file);
     }
 })
+
+    

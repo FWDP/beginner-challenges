@@ -17,11 +17,14 @@ body{
     transform: translate(-50%, -50%);
     z-index: 1;
     overflow: hidden;
+    display: block;
 }
 .card:hover{
     cursor: pointer;
-    transition:.5s ease all ;
+    transition: 0.3s ease all ;
     filter: brightness(.9) saturate(1.2);
+    width: 505px;
+    height: 305px;
 }
 .ph img{
     position: absolute;
@@ -178,14 +181,24 @@ header{
     flex-wrap: nowrap;
     gap: 10px;
 }
-.formBodyFrame>button{
+.up{
     font-size: 20px;
     width: 100px;
     border-radius: 10px;
     position: absolute;
-    top: 85%;
+    top: 83%;
     left: 50%;
-    background-color: cyan;
+    background-color: rgb(145, 255, 255);
+    
+}
+.clc{
+    font-size: 20px;
+    width: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    background-color: rgb(255, 101, 30);
     
 }
 .formBodyFrame>button:hover{
@@ -211,7 +224,10 @@ header{
     z-index: 2;
 }
 .show{
-    display: block
+    display: block;
+}
+.hide{
+    display: none;
 }
 .formPictureFrame{
     margin-top: 80px;
