@@ -55,7 +55,6 @@ body {
     background-repeat: no-repeat;
     background-position-x: 70%;
     background-blend-mode:screen;
-    box-shadow:  var(--shadow);
     border: 1px solid var(--id-border);
 
     grid-template-columns: 
@@ -75,7 +74,6 @@ body {
     min-width: 500px;
     min-height:350px;    
     border-radius: 15px;
-    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 1em;

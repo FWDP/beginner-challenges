@@ -149,20 +149,31 @@ function updateQRcode(name){
     
 }
 
-function handleIDDownload(){
-    console.log("I was called")
+async function handleIDDownload(){
+    actualId.classList.toggle("shadow");
     const testElement =document.getElementById("body")
-    html2canvas(actualId).then((canvas) => {
-        const link = document.createElement("a",{"allowTaint": true});
-        // document.body.appendChild(link);
-        link.onload = () => {
-            console.log("INSIDE ONLOAD")
-            link.download = "html_image.jpg";
-            link.href = canvas.toDataURL('image/png');
-            link.target = '_blank';
-            link.click();
+    await html2canvas(testElement,  {
+        "windowWidth": actualId.scrollWidth,
+        "windowHeight": actualId.scrollHeight,
+        "removeContainer": false,
+        "useCORS": true,
+        "allowTaint": true,
+    }).then((canvas) => {
+        try{
+        const link = document.createElement("a");
+        
+
+        document.body.appendChild(link);
+        link.src = canvas.toDataURL('image/jpg');
+        link.download = "html_image.jpg";
+        link.href = canvas.toDataURL('image/jpg');
+        link.target = '_blank';
+        link.click();
+    }
+        catch(error) {
+        console.error(error)
         }
-            
+        actualId.classList.toggle("shadow");
         
     })
 }

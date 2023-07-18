@@ -68,3 +68,8 @@
 .hide{
     display: none;
 }
+
+.shadow{
+    box-shadow:  var(--shadow);
+    margin-top: 50px;
+}
