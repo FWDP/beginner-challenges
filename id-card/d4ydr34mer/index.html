@@ -18,18 +18,21 @@
     <div class="image"> 
         <img  class="picture" src="images/portriat.png"></img>
     </div>
-    
     <div class="sign"> 
         <img class="signature" src="images/signature.png"></img>
 
     </div>
     <div class="qrcode"> 
           <img class="code" src="images\barcode.png"></img>  
-    </div>
+    </div>  
     <div class="info">
         <div class="name">
             <p>SURNAME, &nbsp;FIRST NAME,&nbsp; MIDDLE NAME</p>
-             <h4 id="fullname">Juan, Dela Cruz </h4>
+             <div class="name-container">
+                <h4 id="surename">MANILA </h4>
+                <h4 id="firstname">Manila</h4>
+                <h4 id="middlename">manila</h4>
+            </div>
         </div>
         <div class="DOB">
                 <p>DATE OF BIRTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SEX &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLACE OF BIRTH</p>
@@ -51,18 +54,26 @@
             </div>
         </div>
     </div>
+      <img class="sun" src="images/sun.png"> </img>
 </div>
  
     <div class="container-form">
     <form>
-        <label for="full-name" class="full-name">FULLNAME</label>
-        <input type="text" name="full-name" id="full-name" placeholder="Enter your Full name" !required>
+        <label for="full-name" class="full-name">SURNAME</label>
+        <input type="text" name="full-name" id="input-surename" placeholder="Enter your SureName" !required>
+        <label for="full-name" class="full-name">FIRSTNAME</label>
+        <input type="text" name="full-name" id="input-firstname" placeholder="Enter your FirstName" !required>
+        <label for="full-name" class="full-name">MIDDLENAME</label>
+        <input type="text" name="full-name" id="input-middlename" placeholder="Enter your MiddleName" !required>
+        
+        
+        
         <label for="bdate" class="bdate">BIRTHDATE</label>
         <input type="date" name="bdate" id="bdate" placeholder="Date/Month/Year" !required >
         <label for="sex" class="sex"class="sex">GENDER</label>
         <input type="text" id="sex" name="sex" pattern="[A-Za-z]" title="Type M for 'male' and F for'FEMALE" !required>
         <label for="bod" class="bod">BIRTH OF PLACE</label>
-         <input type="text" id="bod" name="bod" placeholder="Street/Brgy/City/Province" !required>
+         <input type="text" id="bod" name="bod" placeholder="City/Province"maxlength = "15" !required>
         <label for="address" class="address">ADDRESS</label>
         <input type="text" id="address" name="address" placeholder="Street/Brgy/City/Province" !required>
         <label for="bloodtype" class="bloodtype">BLOODTYPE</label>

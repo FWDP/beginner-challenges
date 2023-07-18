@@ -1,13 +1,23 @@
+ 
 .container
 {
+    position:relative;
+    z-index: 1;
+    overflow:hidden;
+    background-image:url("images/ph.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    background-blend-mode: color-dodge;
     width:650px;
     height:400px;
-    background-color:rgb(152, 201, 233);
+    background-color:#9ed0f1;
     margin:  10px auto;
     border-radius:25px;
    display:grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  
 }
 
 .header
@@ -27,7 +37,7 @@
      
     display:flex;
     margin-left: 50px;
-    background-color: white;
+    background-color:rgb(255,255,255,0.8);
     height:119%;
     justify-content: center;
     align-items: center;
@@ -45,7 +55,7 @@
     grid-row: 5 / 6;
     grid-column: 1 / 3;
     display:flex;
-    background-color: white;
+    background-color:rgb(255,255,255,0.8);
      height:100%;
     justify-content: center;
     align-items: center;
@@ -133,9 +143,18 @@
     letter-spacing: 1px;
      
 }
-.name > h4
+.name-container
 {
+    display:flex;
+     
+    width:100%;
     
+    font-size:1.2em; 
+}
+.name >.name-container > h4
+{
+    margin-top:10px;
+    margin-right:25px;
     letter-spacing: 1px;
    
 }
@@ -189,6 +208,7 @@
 {
     letter-spacing: 1px;
    margin:0;
+   width: 75%;
 }
 
 .container-form
@@ -199,6 +219,7 @@
     margin: auto;
     text-align: center;
     padding:10px;
+    z-index: 1;
 }
 form
 {
@@ -209,9 +230,23 @@ form
     margin: auto;
    row-gap: 5px;
    
+   
 }
 input > #submit
 {
   grid-column: 1 / 3;
      
+}
+
+.sun 
+{
+    display: inline-flex;
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 250px;
+    opacity: 0.3;
+    left: 460px;
+    z-index: -1;
+    
 }
