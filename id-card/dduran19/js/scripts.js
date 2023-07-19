@@ -243,24 +243,10 @@ profilePictureContainer.addEventListener('drop', drop)
 let settingsIsOpen = false
 function toggleSettings(e){
     preventDefaults(e);
-    if (settings.classList.contains('wrap')){ 
-        settings.classList.remove('wrap'); settings.classList.add('unwrap'); 
-        gearIcon.classList.remove('gearIconHover');
-        settingsIsOpen = true
 
-    } else if (settings.classList.contains('unwrap')){ 
-        settings.classList.remove('unwrap'); settings.classList.add('wrap');
-        gearIcon.classList.add('gearIconHover');
-        settingsIsOpen = false
-    } else{
-        settings.classList.add('unwrap'); 
-        gearIcon.classList.add('gearIconHover');
-        settingsIsOpen = true
-    }    
-    console.log('toggleSettings')
+    settingsIsOpen ? hideSettings(e, true) : showSettings(e);
 }
 function showSettings(e){
-    console.log('showSettings, settings is open: ',settingsIsOpen)
     if (e.target === settings && !settingsIsOpen){return}
     if (settings.classList.contains('unwrap')){
     return
@@ -275,10 +261,9 @@ function showSettings(e){
         settingsIsOpen =true    
     }
 }
-function hideSettings(e){
+function hideSettings(e, toggle = false){
     preventDefaults(e)
-    console.log('hideSettings, settings is open: ',settingsIsOpen)
-    if (e.target === gearIcon && settings.classList.contains('unwrap')){return}
+    if (!toggle && e.target === gearIcon && settings.classList.contains('unwrap')){return}
     if (settings.classList.contains('wrap')){
         return} else {
         settings.classList.replace('unwrap', 'wrap')
