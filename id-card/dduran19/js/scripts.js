@@ -7,7 +7,6 @@ const submitButton = document.getElementById("submitButton");
 const cancelButton = document.getElementById("cancelButton");
 const profilePictureContainer = document.getElementById("profilePictureContainer");
 
-const downloadIdButton = document.getElementById("downloadIDButton")
 const barcode = document.getElementById("barcode");
 const firstNameField = document.getElementById("firstName");
 const middleNameField = document.getElementById("middleName");
@@ -281,11 +280,15 @@ const downloadIcon = document.getElementById('downloadIcon');
 const editIcon = document.getElementById('editIcon');
 const formIcon = document.getElementById('formIcon');
 
+downloadIcon.addEventListener('mouseover', preventDefaults)
+editIcon.addEventListener('mouseover', preventDefaults)
+formIcon.addEventListener('mouseover', preventDefaults)
+downloadIcon.addEventListener('mouseleave', preventDefaults)
+editIcon.addEventListener('mouseleave', preventDefaults)
+formIcon.addEventListener('mouseleave', preventDefaults)
+
 downloadIcon.addEventListener('click', handleIDDownload)
 formIcon.addEventListener('click', toggleDetailsForm)
-
-
-
 
 
 
