@@ -240,16 +240,57 @@ profilePictureContainer.addEventListener('dragover', dragOver)
 profilePictureContainer.addEventListener('dragenter', dragEnter)
 profilePictureContainer.addEventListener('dragleave', dragLeave)
 profilePictureContainer.addEventListener('drop', drop)
-
+let settingsIsOpen = false
 function toggleSettings(e){
     preventDefaults(e);
-    if (settings.classList.contains('wrap')){ settings.classList.remove('wrap'); settings.classList.add('unwrap'); } else 
-    if (settings.classList.contains('unwrap')){ settings.classList.remove('unwrap'); settings.classList.add('wrap'); } else{
-        settings.classList.add('unwrap'); 
-    }    
-}
+    if (settings.classList.contains('wrap')){ 
+        settings.classList.remove('wrap'); settings.classList.add('unwrap'); 
+        gearIcon.classList.remove('gearIconHover');
+        settingsIsOpen = true
 
+    } else if (settings.classList.contains('unwrap')){ 
+        settings.classList.remove('unwrap'); settings.classList.add('wrap');
+        gearIcon.classList.add('gearIconHover');
+        settingsIsOpen = false
+    } else{
+        settings.classList.add('unwrap'); 
+        gearIcon.classList.add('gearIconHover');
+        settingsIsOpen = true
+    }    
+    console.log('toggleSettings')
+}
+function showSettings(e){
+    console.log('showSettings, settings is open: ',settingsIsOpen)
+    if (e.target === settings && !settingsIsOpen){return}
+    if (settings.classList.contains('unwrap')){
+    return
+    } else if (settings.classList.contains('wrap')){
+        gearIcon.classList.add('gearIconHover');
+        settings.classList.replace('wrap', 'unwrap')
+        settingsIsOpen =true  
+    }
+    else {
+        gearIcon.classList.add('gearIconHover');
+        settings.classList.add('unwrap')
+        settingsIsOpen =true    
+    }
+}
+function hideSettings(e){
+    preventDefaults(e)
+    console.log('hideSettings, settings is open: ',settingsIsOpen)
+    if (e.target === gearIcon && settings.classList.contains('unwrap')){return}
+    if (settings.classList.contains('wrap')){
+        return} else {
+        settings.classList.replace('unwrap', 'wrap')
+        gearIcon.classList.remove('gearIconHover');
+        settingsIsOpen =false
+    }
+}
 gearIcon.addEventListener('click', toggleSettings);
+gearIcon.addEventListener('mouseenter', showSettings);
+gearIcon.addEventListener('mouseleave', hideSettings);
+settings.addEventListener('mouseover', showSettings)
+settings.addEventListener('mouseleave', hideSettings)
   
 
 

@@ -54,9 +54,7 @@
         opacity: 100%;
         min-width: 300px;
     to {
-        opacity: 0%;
-        width: 0px;
-        min-width: 0px;}}}
+        opacity: 0%;}}}
 .blur{
     animation: blur 0.75s ease;
     animation-fill-mode: forwards;}
@@ -106,7 +104,7 @@
     background-color: white;
     border-radius: 15px;
     z-index: 0;}
-.gearIcon:hover{animation: spin 1.5s infinite linear;opacity: 100%;
+.gearIconHover{animation: spin 1.5s infinite linear;opacity: 100%;
 }
 .unwrap {
     animation: unwrapSettings 1.5s forwards 1;
