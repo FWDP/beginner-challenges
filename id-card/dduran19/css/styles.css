@@ -26,6 +26,9 @@
     --id-bg-image: url("../assets/actualId.png");
     --upload-icon: url("../assets/uploadIcon.svg");
     --gear-icon: url("../assets/gearIcon.svg");
+    --edit-icon: url("../assets/editIcon.svg");
+    --download-icon: url("../assets/downloadIcon.svg");
+    --form-icon: url("../assets/formIcon.svg");
 }
 
 *{
@@ -178,4 +181,40 @@ body {
     outline: none;
   }
   
-  
+.editIcon{
+    position: inherit;
+    background: var(--edit-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+    left: 90px
+}
+.downloadIcon{
+    position: inherit;
+    background: var(--download-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+    left: 230px;
+}
+.formIcon{
+    position: inherit;
+    background: var(--form-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    margin-top: 4px;
+    left: 160px;
+}
+.formIcon:hover, .downloadIcon:hover, .editIcon:hover{
+    transform: scale(1.15, 1.15);
+    filter: drop-shadow(5px 5px 1px rgb(6, 189, 180));
+}

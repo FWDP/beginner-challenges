@@ -277,7 +277,12 @@ gearIcon.addEventListener('mouseleave', hideSettings);
 settings.addEventListener('mouseover', showSettings)
 settings.addEventListener('mouseleave', hideSettings)
   
+const downloadIcon = document.getElementById('downloadIcon');
+const editIcon = document.getElementById('editIcon');
+const formIcon = document.getElementById('formIcon');
 
+downloadIcon.addEventListener('click', handleIDDownload)
+formIcon.addEventListener('click', toggleDetailsForm)
 
 
 
