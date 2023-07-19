@@ -23,6 +23,9 @@ const profilePicture=document.getElementById("profilePictureView");
 
 let PROFILEPICTUREIMAGE;
 
+const gearIcon = document.getElementById("gearIcon");
+const settings = document.getElementById("settings");
+
 function toggleDetailsForm() {
     try{
 
@@ -55,7 +58,6 @@ function toggleDetailsForm() {
     console.log(error)
     }
 }
-
 function handleSubmit() {
     const {firstName,
         middleName,
@@ -85,7 +87,6 @@ function handleSubmit() {
     updateQRcode(`${firstName} ${middleName} ${lastName}`)
     toggleDetailsForm()
 }
-
 function handlePictureUpload(event) {
     let picture;
     if(event.dataTransfer.files)
@@ -98,12 +99,10 @@ function handlePictureUpload(event) {
     };
     console.log(pictureReader)
 }
-
 function setUploadIcon(src) {
     const uploadIcon = document.getElementById("uploadIcon");
     uploadIcon.setAttribute("src",src)
 }
-
 
 function getFormValues() {
     const firstName = firstNameField.value
@@ -128,11 +127,9 @@ function getFormValues() {
         eyeColor
     }
 }    
-
 function resetForm(){
     actualForm.reset()
 }
-
 function updateSubmitButton(){
     const formValues = getFormValues();
     const requiredFormValues = [formValues.firstName,
@@ -153,7 +150,6 @@ function updateSubmitButton(){
         submitButton.setAttribute('disabled','disabled');
     }
 }
-
 function updateQRcode(name){
     const parsedData=`Hi my name is ${name}.`
 
@@ -194,7 +190,6 @@ actualId.addEventListener("dblclick", toggleDetailsForm);
 cancelButton.addEventListener("click",toggleDetailsForm)
 blank.addEventListener("click",toggleDetailsForm)
 submitButton.addEventListener("click",handleSubmit)
-downloadIdButton.addEventListener("click", handleIDDownload)
 
 
 firstNameField.addEventListener('change', updateSubmitButton)
@@ -246,7 +241,15 @@ profilePictureContainer.addEventListener('dragenter', dragEnter)
 profilePictureContainer.addEventListener('dragleave', dragLeave)
 profilePictureContainer.addEventListener('drop', drop)
 
+function toggleSettings(e){
+    preventDefaults(e);
+    if (settings.classList.contains('wrap')){ settings.classList.remove('wrap'); settings.classList.add('unwrap'); } else 
+    if (settings.classList.contains('unwrap')){ settings.classList.remove('unwrap'); settings.classList.add('wrap'); } else{
+        settings.classList.add('unwrap'); 
+    }    
+}
 
+gearIcon.addEventListener('click', toggleSettings);
   
 
 

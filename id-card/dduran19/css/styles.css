@@ -25,6 +25,7 @@
     --profile-picture: url("../assets/defaultPicture.jpg");
     --id-bg-image: url("../assets/actualId.png");
     --upload-icon: url("../assets/uploadIcon.svg");
+    --gear-icon: url("../assets/gearIcon.svg");
 }
 
 *{
