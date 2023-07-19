@@ -1,39 +1,48 @@
-const Btn = document.querySelector('#submitBtn')
-const name  = document.querySelector('#fullName')
-const birthDate = document.querySelector('#birthDate')
-const sex  = document.querySelector('#sex')
-const city = document.querySelector('#city')
-const address = document.querySelector('#fullAddress')
-const bloodType = document.querySelector('#blood')
-const eyeColor = document.querySelector('#eye') 
+const submitBtn = document.querySelector('#submit')
+const form = document.querySelector("form")
+const idFullName = document.querySelector("#fullNameID")
+const idBirthDate = document.querySelector("#birthDateID")
+const idSex = document.querySelector('#sexID')
+const idBirth = document.querySelector('#birthID')
+const idAddress = document.querySelector('#addressID')
+const idBlood = document.querySelector('#bloodID')
+const idEyes = document.querySelector('#eyesID')
 
 
 
-Btn.addEventListener('click',()=>{   
-    getUserInput()    
-    // console.log("hotdog")
-    // `
+submitBtn.addEventListener('click',()=>{
+      addToID()   
 })
 
-const getUserInput = () =>{
-    let userFullname= document.querySelector('#userName').value
-    name.innerHTML = `${userFullname}`
+const addToID = ()=>{
 
-    let userDate = document.querySelector('#userBirthYear').value
-    birthDate.innerHTML = `${userDate}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`
+    let firstName = document.querySelector('#firstName').value
+    let middleName = document.querySelector('#middleName').value
+    let LastName = document.querySelector('#lastName').value
+    let birthDate = document.querySelector('#birthDate').value
+    let birthPlace = document.querySelector('#place').value
+    let address = document.querySelector('#address').value
+    let bloodType = document.querySelector('#bloodType').value
+    let eyesColor = document.querySelector('#eyesColor').value
+    
+   
 
-    let userSex = document.querySelector('#userSex').value
-    sex.innerHTML = `${userSex}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`
+    idFullName.innerHTML = `${LastName.toUpperCase()}, ${firstName.toUpperCase()}, ${middleName.toUpperCase()}`
+    idBirthDate.innerHTML = `${birthDate}`
+    let sex =  document.getElementsByName('Sex')
+    for (i = 0; i< sex.length; i++ ){
+        if (sex[i].checked){
+            idSex.innerHTML = sex[i].value
+        }
+    }
+    idBirth.innerHTML = `${birthPlace.toUpperCase()}`
+    idAddress.innerHTML = `${address.toUpperCase()}`
+    idBlood.innerHTML = `${bloodType}`
+    idEyes.innerHTML = `${eyesColor}`
 
-    let userPlaceBirth = document.querySelector('#userPlaceBirth').value
-    city.innerHTML = `${userPlaceBirth}`
-
-    let userAddress = document.querySelector('#userAddress').value
-    address.innerHTML = `${userAddress}`
-
-    let userBloodType = document.querySelector('#userBloodType').value
-    bloodType.innerHTML= `${userBloodType}&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;`
-
-    let userEyeColor = document.querySelector('#userEyeColor').value
-    eyeColor.innerHTML = `${userEyeColor}`
+    form.reset()
 }
+
+
+
+
