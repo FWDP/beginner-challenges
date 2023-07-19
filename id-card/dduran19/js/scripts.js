@@ -1,11 +1,10 @@
-document.addEventListener("DOMContentLoaded",() => {
 const actualId=document.getElementById("actualId");
-const blank=document.getElementById("blank");
-const actualForm=document.getElementById("actualForm");
-const newDetailsForm = document.getElementById("newDetails");
-const submitButton = document.getElementById("submitButton");
-const cancelButton = document.getElementById("cancelButton");
-const profilePictureContainer = document.getElementById("profilePictureContainer");
+ const blank=document.getElementById("blank");
+ const actualForm=document.getElementById("actualForm");
+ const newDetailsForm = document.getElementById("newDetails");
+ const submitButton = document.getElementById("submitButton");
+ const cancelButton = document.getElementById("cancelButton");
+ const profilePictureContainer = document.getElementById("profilePictureContainer");
 
 const barcode = document.getElementById("barcode");
 const firstNameField = document.getElementById("firstName");
@@ -184,7 +183,6 @@ async function handleIDDownload(){
         
     })
 }
-
 actualId.addEventListener("dblclick", toggleDetailsForm);
 cancelButton.addEventListener("click",toggleDetailsForm)
 blank.addEventListener("click",toggleDetailsForm)
@@ -290,13 +288,3 @@ formIcon.addEventListener('mouseleave', preventDefaults)
 downloadIcon.addEventListener('click', handleIDDownload)
 formIcon.addEventListener('click', toggleDetailsForm)
 
-
-
-
-
-
-
-
-
-
-});
