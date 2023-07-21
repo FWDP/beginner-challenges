@@ -1,5 +1,7 @@
 const submitBtn = document.querySelector('#submit')
+const cancelBtn = document.querySelector('#cancel')
 const form = document.querySelector("form")
+const idCard =document.querySelector(".id-container")
 const idFullName = document.querySelector("#fullNameID")
 const idBirthDate = document.querySelector("#birthDateID")
 const idSex = document.querySelector('#sexID')
@@ -7,12 +9,29 @@ const idBirth = document.querySelector('#birthID')
 const idAddress = document.querySelector('#addressID')
 const idBlood = document.querySelector('#bloodID')
 const idEyes = document.querySelector('#eyesID')
+const idPhoto = document.querySelector('#photoID')
+const photoInput = document.querySelector('#photo')
+let uPhoto 
+
+
+
+
+const addIdPhoto = ()=> {
+    idPhoto.setAttribute('src', uPhoto)
+}
+
 
 
 
 submitBtn.addEventListener('click',()=>{
-      addToID()   
+      addToID() 
+      addIdPhoto()   
+      hideForm()   
 })
+
+cancelBtn.addEventListener('click',()=> hideForm())
+
+idCard.addEventListener('dblclick',()=> showForm())
 
 const addToID = ()=>{
 
@@ -34,15 +53,29 @@ const addToID = ()=>{
         if (sex[i].checked){
             idSex.innerHTML = sex[i].value
         }
-    }
+    }//try if for each will work
     idBirth.innerHTML = `${birthPlace.toUpperCase()}`
     idAddress.innerHTML = `${address.toUpperCase()}`
     idBlood.innerHTML = `${bloodType}`
     idEyes.innerHTML = `${eyesColor}`
 
+   
+    
+
     form.reset()
 }
 
 
-
-
+const showForm = ()=> {
+    form.style.display= `grid`
+    photoInput.addEventListener('change', () =>{
+        const file = photoInput.files[0]
+        const reader = new FileReader()
+        reader.onload = ()=> uPhoto = reader.result     
+        reader.readAsDataURL(file)
+    })
+}
+const hideForm = ()=> form.style.display= `none`
+const convertID = ()=> {
+  
+}
