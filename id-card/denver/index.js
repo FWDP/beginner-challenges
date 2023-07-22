@@ -11,27 +11,38 @@ const idBlood = document.querySelector('#bloodID')
 const idEyes = document.querySelector('#eyesID')
 const idPhoto = document.querySelector('#photoID')
 const photoInput = document.querySelector('#photo')
+const modalBg = document.querySelector(".modal-bg")
 let uPhoto 
 
-
-
+const qrCode = document.querySelector('#qrCode')
 
 const addIdPhoto = ()=> {
     idPhoto.setAttribute('src', uPhoto)
 }
 
-
-
-
-submitBtn.addEventListener('click',()=>{
-      addToID() 
-      addIdPhoto()   
-      hideForm()   
+modalBg.addEventListener('click', ()=>{
+    hideForm()
+    hideModal()
 })
 
-cancelBtn.addEventListener('click',()=> hideForm())
+submitBtn.addEventListener('click',()=>{
+        // generateQR()
+      addToID() 
+      addIdPhoto()   
+      hideForm()
+      hideModal()   
+})
 
-idCard.addEventListener('dblclick',()=> showForm())
+cancelBtn.addEventListener('click',()=> {
+    hideForm()
+    hideModal()
+})
+
+idCard.addEventListener('dblclick',()=> {
+    showModal()
+    showForm()
+    
+})
 
 const addToID = ()=>{
 
@@ -44,7 +55,6 @@ const addToID = ()=>{
     let bloodType = document.querySelector('#bloodType').value
     let eyesColor = document.querySelector('#eyesColor').value
     
-   
 
     idFullName.innerHTML = `${LastName.toUpperCase()}, ${firstName.toUpperCase()}, ${middleName.toUpperCase()}`
     idBirthDate.innerHTML = `${birthDate}`
@@ -59,7 +69,9 @@ const addToID = ()=>{
     idBlood.innerHTML = `${bloodType}`
     idEyes.innerHTML = `${eyesColor}`
 
-   
+    let qrImage = `https://barcode.orcascan.com/?data=Hi I'm ${firstName} ${middleName} ${LastName} `
+    
+    qrCode.setAttribute ('src',qrImage)
     
 
     form.reset()
@@ -75,7 +87,11 @@ const showForm = ()=> {
         reader.readAsDataURL(file)
     })
 }
+
 const hideForm = ()=> form.style.display= `none`
-const convertID = ()=> {
-  
-}
+
+const showModal = ()=> modalBg.style.display = 'block' 
+
+const hideModal = ()=> modalBg.style.display = 'none' 
+
+
