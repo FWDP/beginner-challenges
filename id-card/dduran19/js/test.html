@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        #profilePictureContainer {
-            width: 200px;
-            height: 200px;
-            border: 2px dashed gray;
-            text-align: center;
-            line-height: 200px;
-            font-size: 20px;
-        }
+    <style type="text/css">
+        p { background-color:green;color:white; }
+        div { background-color:blue;color:white; }
     </style>
-</head>
-<body>
-    <div id="profilePictureContainer">
-        Drag and drop an element here.
-    </div>
 
     <script>
-        var profilePictureContainer = document.getElementById('profilePictureContainer');
 
-        // Prevent default behavior when dragging over the container
-        profilePictureContainer.addEventListener('dragover', function (e) {
-            e.preventDefault();
-        });
 
-        // Handle drop event
-        profilePictureContainer.addEventListener('drop', function (e) {
-            e.preventDefault();
+      function replaceTag(id){
+       var that = document.getElementById(id);
 
-            var droppedElement = e.dataTransfer.getData('text');
-            profilePictureContainer.appendChild(document.getElementById(droppedElement));
-        });
-    </script>
+       var p = document.createElement('p');
+       p.setAttribute('id',that.getAttribute('id'));
+
+     // move all elements in the other container.
+     while(that.firstChild) {
+         p.appendChild(that.firstChild);
+     }
+     that.parentNode.replaceChild(p,that);
+
+ }
+</script> 
+</head>
+<body>
+
+    <div id="demo">Hello WORLD
+     <UL>
+      <LI>something</LI>
+  </UL>
+</div>
+
+<input type="button" onclick="replaceTag('demo')" value="transform">
+
+
 </body>
 </html>

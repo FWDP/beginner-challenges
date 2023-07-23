@@ -32,7 +32,7 @@
     padding:5px
 }
 
-input, select {
+#actualForm>input, #actualForm>select {
     border-radius: 15px;
     margin-bottom: 5px;
     height: 35px;
@@ -50,6 +50,12 @@ input, select {
     margin-left: auto;
     margin-right: auto;
 }
+#profilePictureContainer2{
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+}
 .uploadButton{
     position: relative;
 	top: -22px;
@@ -65,4 +71,29 @@ input, select {
 opacity: 0%;
 cursor: pointer;
 
+}
+#actualForm2>div>input, #actualForm2>div>select{
+    background-color: rgba(0,0,0,0);
+    font-size: 0.80rem;
+    border-radius: 3px;
+}
+#actualForm2>div>#dobEdit{
+    font-size: 0.75rem;
+}
+#actualForm2>div>input[type="submit"],
+#actualForm2>div>input[type="reset"] {
+    min-width: auto;
+    min-height: auto;
+    width: 7rem;
+    height: 2rem;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#actualForm2>div>#submitButton2 {
+    background-color: var(--submit);
+}
+
+#actualForm2>div>#cancelButton2 {
+    background-color: var(--cancel);
 }

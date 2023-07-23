@@ -16,6 +16,8 @@
     --id-border: black;
     --font-color: rgb(0, 0, 0);
     --shadow: 5px 5px 10px 1px rgb(20, 20, 20);
+    --cancel: rgb(238, 150, 144);
+    --submit: lightgreen;
     
     /* font-family */
     --font-barcode: 'Libre Barcode 128', cursive;
@@ -103,11 +105,11 @@ body {
 }
 .submitButton{
     margin-top: 20px;
-    background-color: lightgreen;
+    background-color: var(--submit);
 }
 .cancelButton{
     margin-top: 10px;
-    background-color: rgb(238, 150, 144);
+    background-color: var(--cancel);
 }
 .formButton{
     grid-column: 1/3;

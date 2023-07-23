@@ -19,15 +19,15 @@
         </div>
         <form class="cardBody grid-container" id="actualForm">
 
-            <div class="desc newDetailLabel col-1 row-1">First Name</div>
-            <div class="desc newDetailLabel col-1 row-2">Middle Name</div>
-            <div class="desc newDetailLabel col-1 row-3">Last Name</div>
-            <div class="desc newDetailLabel col-1 row-4">Date</div>
-            <div class="desc newDetailLabel col-1 row-5">Sex</div>
-            <div class="desc newDetailLabel col-1 row-6">Place of  Birth</div>
-            <div class="desc newDetailLabel col-1 row-7">Home Address</div>
-            <div class="desc newDetailLabel col-1 row-8">Blood Type</div>
-            <div class="desc newDetailLabel col-1 row-9">Eye Color</div>
+            <p class="desc newDetailLabel col-1 row-1">First Name</p>
+            <p class="desc newDetailLabel col-1 row-2">Middle Name</p>
+            <p class="desc newDetailLabel col-1 row-3">Last Name</p>
+            <p class="desc newDetailLabel col-1 row-4">Date</p>
+            <p class="desc newDetailLabel col-1 row-5">Sex</p>
+            <p class="desc newDetailLabel col-1 row-6">Place of  Birth</p>
+            <p class="desc newDetailLabel col-1 row-7">Home Address</p>
+            <p class="desc newDetailLabel col-1 row-8">Blood Type</p>
+            <p class="desc newDetailLabel col-1 row-9">Eye Color</p>
 
             <input class="col-2 row-1" type="text" name="firstName" id="firstName" placeholder="First Name" required autocomplete/>
             <input class="col-2 row-2" type="text" name="middleName" id="middleName" placeholder="Middle Name" autocomplete/>
@@ -58,7 +58,7 @@
                 <option value="Green">Green</option>
                 <option value="Hazel">Hazel</option>
             </select> 
-            <div data-html2canvas-ignore class="profilePictureContainer row-10 col-1-3" id="profilePictureContainer">
+            <div class="profilePictureContainer row-10 col-1-3" id="profilePictureContainer">
                 <img src="assets/uploadIcon.svg" alt="Upload Icon" class="uploadIcon" id="uploadIcon">
                 Drag & Drop your profile Picture or<br><span class="uploadText">Click here</span>.
                 <span class="uploadButton" >
@@ -69,32 +69,62 @@
             <input class="cancelButton formButton row-12" id="cancelButton" type="button" value="Cancel">
         </form>
     </div>
+        <form id="actualForm2">
     <div class="actualId grid-container shadow" id="actualId">
         <img class="profile ml-20 row-2-10 col-1-2" id="profilePictureView">
 
         <img class="barcode ml-20 row-10-11 col-1" id="barcode" src="https://barcode.orcascan.com/?type=qr&data=Hi%20my%20name%20is%20Denver%20James%20Espiritu%20Duran." alt="barcode">
 
-        <div class="small centered-text republic row-1 col-1-8">
-            REPUBLIC OF THE PHILIPPINES
-        </div>
-        <div class="big centered-text national row-1 col-1-8">FWDP IDENTIFICATION</div>
-        <div class="description row-2 col-3-5">SURNAME, FIRST NAME, MIDDLE NAME</div>
-        <div class="data row-3 col-3-7" id="nameView">DURAN, DENVER JAMES ESPIRITU</div>
-        <div class="description row-4 col-3">DATE OF BIRTH</div>
-        <div class="data col-3 row-5" id="dobView">08/19/1995</div>
-        <div class="description row-4 col-4">SEX</div>
-        <div class="data col-4 row-5" id="sexView">M</div>
-        <div class="description col-5 row-4">PLACE OF BIRTH</div>
-        <div class="data col-5 row-5" id="pobView">VALENZUELA</div>
-        <div class="description row-6 col-3-6">ADDRESS</div>
-        <div class="data row-7 col-3-7" id="addressView">
-            CANUMAY WEST VALENZUELA CITY
-        </div>
-        <div class="description col-3 row-8">BLOOD TYPE</div>
-        <div class="data col-3 row-9" id="bloodTypeView">O+</div>
-        <div class="description col-5 row-8">EYES COLOR</div>
-        <div class="data col-5 row-9" id="eyeColorView">BROWN</div>
+        <p class="small centered-text republic row-1 col-1-8">REPUBLIC OF THE PHILIPPINES</p>
+        <p class="big centered-text national row-1 col-1-8">FWDP IDENTIFICATION</p>
+        <p class="description row-2 col-3-5">SURNAME, FIRST NAME, MIDDLE NAME</p>
+        <p class="data row-3 col-3-7" id="nameView">DURAN, DENVER JAMES ESPIRITU</p>
+        <p class="description row-4 col-3">DATE OF BIRTH</p>
+        <p class="data col-3 row-5" id="dobView">08/19/1995</p>
+        <p class="description row-4 col-4">SEX</p>
+        <p class="data col-4 row-5" id="sexView">M</p>
+        <p class="description col-5 row-4">PLACE OF BIRTH</p>
+        <p class="data col-5 row-5" id="pobView">VALENZUELA</p>
+        <p class="description row-6 col-3-6">ADDRESS</p>
+        <p class="data row-7 col-3-7" id="addressView">CANUMAY WEST VALENZUELA CITY</p>
+        <p class="description col-3 row-8">BLOOD TYPE</p>
+        <p class="data col-3 row-9" id="bloodTypeView">O+</p>
+        <p class="description col-5 row-8">EYES COLOR</p>
+        <p class="data col-5 row-9" id="eyeColorView">BROWN</p>
+        
+        <input class="data row-3 col-3-7 hide" type="text" id="nameEdit" required/>
+        <input class="data col-3 row-5 hide"  type="date" id="dobEdit" required/>
+        <select class="data col-4 row-5 hide" id="sexEdit" required>
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+        <input class="data row-5 col-5-7 hide"  type="text" id="pobEdit" required/>
+        <input class="data row-7 col-3-7 hide" type="text" id="addressEdit" required/>
+        <select class="data col-3 row-9 hide"  id="bloodTypeEdit" required>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <select class="data col-5 row-9 hide"  id="eyeColorEdit" required>
+            <option value="Amber">Amber</option>
+            <option value="Black">Blue</option>
+            <option value="Black">Black</option>
+            <option value="Brown">Brown</option>
+            <option value="Gray">Gray</option>
+            <option value="Green">Green</option>
+            <option value="Hazel">Hazel</option>
+        </select> 
+        <input class="submitButton hide formButton row-10 col-4-7"  id="submitButton2" type="submit" value="Submit">
+        <input class="cancelButton hide formButton row-10 col-3-4" id="cancelButton2" type="reset" value="Cancel">
+
+        <img class="profilePictureContainer hide row-2-10 col-1-2 " id="profilePictureContainer2"/>
     </div>
+    </form>
 
     <div class="gearIconContainer">
         <div class="clickHere settings" id="settings">
@@ -106,9 +136,9 @@
         <div class="clickHere">Click the &#x2699; to view more options</div>
     
     </div>
+    <p id="response"></p>
 </body>
 
-<script src="js/scripts.js"></script>
-<script src="js/databaseHandler.js"></script>
+<script type="module" src="js/scripts.js"></script>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </html>
