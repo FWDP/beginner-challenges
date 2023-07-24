@@ -20,7 +20,6 @@ body{
 }
 
 .id-container{
-
     background-image: url('images/mapBG.png');
     background-repeat: no-repeat;
     background-size: 40%;
@@ -28,8 +27,10 @@ body{
     background-blend-mode: hard-light;
     border: 2px solid black;
     /* margin-top: 50px; */
-    margin-left: auto;
-    margin-right: auto;
+    /* position:absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
     background-color: skyblue;
     height: 300px;
     width: 500px;
@@ -51,7 +52,6 @@ body{
     
 }
 #flag{
- 
     height: 2rem;
 }
 #shield{
@@ -65,18 +65,20 @@ span{
     font-size: 0.7rem;
     font-weight: 500;
 }
+
 /* PICTURE */
 .picture{
     /* background-color: aquamarine; */
     border: 1px solid black;
+    border-radius:12px;
     grid-column: 1/2;
     grid-row: 2/6;
 }
-
 .picture > img{
     /* background-image:url('images/idPhoto.jpg'); */
     height: 100%; 
     width: 100%;
+    border-radius:12px;
 }
 
 /* DETAILS */
@@ -88,7 +90,6 @@ span{
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns:0.65fr 1.2fr ;
     padding: 15px;
-    
 }
 h6{
     font-size: .54rem;
@@ -123,7 +124,9 @@ h5{
     background-color:coral;
     background-image: url('images/barcode.png');
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    border-radius: 13px;
+    border: 1px solid black;
 
 }
 
@@ -148,6 +151,7 @@ form{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     padding: 20px;
+    border-radius: 20px;
     /* justify-content: center; */
     /* align-content: center; */
 }
@@ -166,11 +170,9 @@ form{
     background-color: rgba(0,0,0,0.4); 
 }
 
-
-/* form > input, select{
-    width: 50px;
-} */
-
+form > input, select{
+    height: 2rem;
+}
 
 .formName{
     grid-column: 1/4;
@@ -180,7 +182,6 @@ form{
 .formName > input{
     width: 90px;
 }
-
 .formBirth{
     grid-column: 1/4;
     display: grid;
@@ -189,19 +190,33 @@ form{
 .formBirth > input{
     width: 90px;
 }
-
 .formAddress{
     grid-column: 1/4;
     display: grid;
     grid-template-columns: repeat(3,1fr);  
 }
-
 .formTypes{
     grid-column: 1/4;
     display: grid;
     grid-template-columns: repeat(3,1fr);  
 }
-
 button{
     margin-left: 6rem;
 }
+.wrapper{
+    /* height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    */
+
+    /* position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin-top: 120px;
+    display: grid;
+    justify-content: center;
+} 

@@ -11,14 +11,15 @@ const idBlood = document.querySelector('#bloodID')
 const idEyes = document.querySelector('#eyesID')
 const idPhoto = document.querySelector('#photoID')
 const photoInput = document.querySelector('#photo')
-const modalBg = document.querySelector(".modal-bg")
+const modalBg = document.querySelector('.modal-bg')
+const downloadBtn = document.querySelector('#downLoadBtn')
 let uPhoto 
 
 const qrCode = document.querySelector('#qrCode')
 
-const addIdPhoto = ()=> {
-    idPhoto.setAttribute('src', uPhoto)
-}
+downloadBtn.addEventListener('click', ()=>{
+    
+})
 
 modalBg.addEventListener('click', ()=>{
     hideForm()
@@ -93,5 +94,29 @@ const hideForm = ()=> form.style.display= `none`
 const showModal = ()=> modalBg.style.display = 'block' 
 
 const hideModal = ()=> modalBg.style.display = 'none' 
+
+const addIdPhoto = ()=> idPhoto.setAttribute('src', uPhoto)
+
+const screenShot = ()=>{
+    html2canvas(document.querySelector(".id-container")).then(canvas => {
+        const image = canvas.toDataURL()
+        // get the base 64 encoded image data
+
+        // create a link with download attribute
+        let downloadLink = document.createElement("a")
+        downloadLink.href = image;
+        downloadLink.download = "screenshot.png"
+        console.log(downloadLink)
+        // appende the link to the body
+
+        document.body.appendChild(downloadLink)
+
+        //Click the link to download the image
+        downloadLink.click()
+        
+});
+
+
+}
 
 

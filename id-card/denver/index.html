@@ -4,65 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ID-CARD</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-  
+        
+        <div class="wrapper">
 
-    <div class="id-container">
-        <div class="header">
-            <img src="images/flag.webp" alt="Flag.jpg" id="flag">
-            <div class="caption">
-                <h3><span>REPUBLIC OF THE PHILIPPINES</span><br>
-                    NATIONAL IDENTIFICATION
-                </h3>
-  
-            </div>
-            <img src="images/shield.png" alt="" id="shield">
-        </div>
-        <div class="picture">
-            <img src="images/idPhoto.jpg" alt="" id="photoID">
-        </div> 
-        <div class="details">
-            <div class="surName">
-                <h6>SURNAME, FIRST NAME, MIDDLNAME</h6>
-                    <h5 id="fullNameID">TALAMAYAN,DENVER BRIAN TAMPOL </h5>
-            </div>
-            <div class="birth">
-                <h6>DATE OF BIRTH</h6>
-                <h5 id="birthDateID">2023-07-10</h5>
-            </div>
-            <div class="sexPlace">
-                <div>
-                    <h6>SEX</h6>
-                    <h5 id="sexID">M</h5>
+            <div class="id-container">
+                <div class="header">
+                    <img src="images/flag.webp" alt="Flag.jpg" id="flag">
+                    <div class="caption">
+                        <h3><span>REPUBLIC OF THE PHILIPPINES</span><br>
+                            NATIONAL IDENTIFICATION
+                        </h3>
+                    </div>
+                    <img src="images/shield.png" alt="" id="shield">
                 </div>
-                <div>
-                    <h6>PLACE OF BIRTH</h6>
-                    <h5 id="birthID">PHILIPPINES</h5>
+                <div class="picture">
+                    <img src="images/idPhoto.jpg" alt="" id="photoID">
                 </div> 
-            </div>
-            <div class="address">
-                <h6>ADDRESS</h6>
-                <h5 id="addressID">1600 Amphitheatre Parkway in Mountain View, California.</h5>
-            </div>
-            <div class="bloodType">
-                <h6>BLOOD TYPE</h6>
-                <h5 id="bloodID">AB+</h5>
-            </div>
-            <div class="eyesColor">
-                <h6>EYES COLOR</h6>
-                <h5 id="eyesID">BROWN</h5>
-            </div>
-        </div>
-        <div class="barcode">
-            <img src="https://barcode.orcascan.com/?data=default;" alt="" id="qrCode">
-            
-        </div>   
-    </div>
+                <div class="details">
+                    <div class="surName">
+                        <h6>SURNAME, FIRST NAME, MIDDLNAME</h6>
+                            <h5 id="fullNameID">TALAMAYAN,DENVER BRIAN TAMPOL </h5>
+                    </div>
+                    <div class="birth">
+                        <h6>DATE OF BIRTH</h6>
+                        <h5 id="birthDateID">2023-07-10</h5>
+                    </div>
+                    <div class="sexPlace">
+                        <div>
+                            <h6>SEX</h6>
+                            <h5 id="sexID">M</h5>
+                        </div>
+                        <div>
+                            <h6>PLACE OF BIRTH</h6>
+                            <h5 id="birthID">PHILIPPINES</h5>
+                        </div> 
+                    </div>
+                    <div class="address">
+                        <h6>ADDRESS</h6>
+                        <h5 id="addressID">1600 Amphitheatre Parkway in Mountain View, California.</h5>
+                    </div>
+                    <div class="bloodType">
+                        <h6>BLOOD TYPE</h6>
+                        <h5 id="bloodID">AB+</h5>
+                    </div>
+                    <div class="eyesColor">
+                        <h6>EYES COLOR</h6>
+                        <h5 id="eyesID">BROWN</h5>
+                    </div>
+                </div>
+                <div class="barcode">
+                    <img src="https://barcode.orcascan.com/?data=default;" alt="" id="qrCode">   
+                </div> 
+            </div>  
 
-   
+            <div class="settings">
+                <button id="downLoadBtn" onclick="screenShot()">Downloan ID</button>
+            </div>
+            
+        </div>
+                     
+ 
     <div class="modal-bg">    
     </div>
     
@@ -151,9 +156,11 @@
         <button type="button" id="cancel">Cancel</button>
     </form>
 
+        
+
     
 
-
+    <script></script>
     <script src="index.js"></script>
 </body>
 </html>
