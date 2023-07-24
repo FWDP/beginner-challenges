@@ -1,0 +1,39 @@
+/* *, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+header {
+    position: absolute;
+    top: 0;
+    /* left: 0;
+    right: 0; */
+    
+}
+
+.default-padding {
+    padding: 0 350px;
+}
+
+body {    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar .nav-link {
+    color: white;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    padding-left: 20px;
+}
+
+.styledText {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.2) 400%, rgba(255, 255, 255, 0.1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
