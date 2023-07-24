@@ -1,15 +1,6 @@
-/* *, ::before, ::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
-
 header {
     position: absolute;
-    top: 0;
-    /* left: 0;
-    right: 0; */
-    
+    top: 0;    
 }
 
 .default-padding {
@@ -27,6 +18,13 @@ body {
 
 .nav-item {
     padding-left: 20px;
+}
+
+.nav-item:hover {
+    background-color: #53c2c9;
+    padding: 0.25px 0.25px;
+    border-radius: 10px;
+    transition: 0.4s;
 }
 
 .styledText {
