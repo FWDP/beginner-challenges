@@ -9,7 +9,7 @@
 </head>
 <body>
         
-        <div class="wrapper">
+    <div class="wrapper">
 
             <div class="id-container">
                 <div class="header">
@@ -56,18 +56,31 @@
                         <h5 id="eyesID">BROWN</h5>
                     </div>
                 </div>
-                <div class="barcode">
+                <!-- <div class="barcode"> -->
                     <img src="https://barcode.orcascan.com/?data=default;" alt="" id="qrCode">   
-                </div> 
+                <!-- </div>  -->
             </div>  
 
             <div class="settings">
-                <button id="downLoadBtn" onclick="screenShot()">Downloan ID</button>
+                <button onclick="showList()" id="showSettings">Show Settings</button>
+
+                <div id="dropdown">
+                    <ul>
+                        <li>
+                            <button id="downLoadBtn" onclick="screenShot()">Downloan ID</button>
+                        </li>
+                        <li>
+                            <button id="editMode">edit mode</button>
+                        </li>
+                        <li>
+                            <button onclick="">show Form</button>
+                        </li>
+                    </ul>
+                </div> 
             </div>
             
-        </div>
+    </div>
                      
- 
     <div class="modal-bg">    
     </div>
     

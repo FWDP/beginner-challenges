@@ -24,7 +24,7 @@ body{
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: 70%;
-    background-blend-mode: hard-light;
+    /* background-blend-mode: hard-light; */
     border: 2px solid black;
     /* margin-top: 50px; */
     /* position:absolute; */
@@ -121,7 +121,7 @@ h5{
 /* BARCODE */
 .barcode{
     height: 2.8rem;
-    background-color:coral;
+    /* background-image: url('images/mapBG.png'); */
     background-image: url('images/barcode.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -130,10 +130,20 @@ h5{
 
 }
 
-.barcode > img{
+/* .barcode > img{
     height: 2.8rem;
     width: 11rem;
     
+} */
+
+#qrCode{
+    height: 2.8rem;
+    width: 11rem;
+    background-image: url('images/barcode.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+    border: 1px solid black;
 }
 
 /* FORM modal */
@@ -200,9 +210,24 @@ form > input, select{
     display: grid;
     grid-template-columns: repeat(3,1fr);  
 }
-button{
-    margin-left: 6rem;
+
+/* SETTINGS */
+.settings{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
+#dropdown{
+    background: aqua;
+    display: none;
+}
+#dropdown > ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+
 .wrapper{
     /* height: 100%;
     width: 100%;
@@ -220,3 +245,4 @@ button{
     display: grid;
     justify-content: center;
 } 
+
