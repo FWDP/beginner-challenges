@@ -40,7 +40,7 @@ Project Curriculum:
     - Startup your API experience by creating a javascript function that uses this website: https://orcascan.com/guides/free-barcode-image-api-0e4a4fa6
     - Read the documentation on how to use it.
 9. Adding more Features
-    - Create a button that will allow the user to download their ID in an image format.
+    - Create a button that will allow the user to download their ID in an image format using [html2canvas](https://html2canvas.hertzen.com/) api.
 10. Database
     - Below the download button, Create a list view of all "registered" users who made an ID.
 

@@ -11,7 +11,7 @@
 
     /* colors */
     --main-bg-color: brown;
-    --blue-bg-color: #2990cb;
+    --blue-bg-color: #c5d2da;
     --id-bg-color:   #c7eefe; 
     --id-border: black;
     --font-color: rgb(0, 0, 0);
@@ -22,10 +22,13 @@
     --font-details:Inter;
 
     /* images */
-    --profile-picture: url("https://media.licdn.com/dms/image/D5603AQExNmgonLxlHQ/profile-displayphoto-shrink_800_800/0/1683598618905?e=1695254400&v=beta&t=jFyQy3g7F9HFmjDC-A024HikoM1ID_ZAd6HWh4LVuq8");
-    --flag: url("../assets/PHFlag.svg");
-    --right-logo: url("../assets/CoatofArms.png");
-    --philippines: url("../assets/ph.png")
+    --profile-picture: url("../assets/defaultPicture.jpg");
+    --id-bg-image: url("../assets/actualId.png");
+    --upload-icon: url("../assets/uploadIcon.svg");
+    --gear-icon: url("../assets/gearIcon.svg");
+    --edit-icon: url("../assets/editIcon.svg");
+    --download-icon: url("../assets/downloadIcon.svg");
+    --form-icon: url("../assets/formIcon.svg");
 }
 
 *{
@@ -36,6 +39,7 @@
 
 body {
     background-color: var(--blue-bg-color);
+    display:grid;
 }
 #blank{
     position: absolute;
@@ -48,13 +52,7 @@ body {
 }
 
 .actualId{
-    background: var(--philippines);
-    background-color: var(--id-bg-color);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: 70%;
-    background-blend-mode:screen;
-    box-shadow:  var(--shadow);
+    background: var(--id-bg-image);
     border: 1px solid var(--id-border);
 
     grid-template-columns: 
@@ -68,28 +66,15 @@ body {
         20px 50px;
     gap: 1px;
 
-
-    height: 350px;
     width: 500px;
+    height: 350px;
     min-width: 500px;
     min-height:350px;    
     border-radius: 15px;
-    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 1em;
     overflow: hidden;
-}
-.flag {
-    background: var(--flag);
-    background-repeat: no-repeat;
-}
-.coat {
-    background: var(--right-logo);
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-top: 3px;
-    width: 55px;
 }
 .profile{
     background: var(--profile-picture);
@@ -100,19 +85,16 @@ body {
     border: 1px solid var(--id-border);
     width: 100%;
     height: 100%;
+    margin-left: 20px;
 }
 .barcode{
-    font-family: var(--font-barcode);
-    background: url("https://img.freepik.com/premium-vector/seamless-pattern-simulated-qr-code-background-banner-screen-saver-design_888684-1254.jpg?w=1800");
-    background-size: contain;
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    width: 51px;
+    height: 51px;
     font-size: 30px;
     margin-top: 5px;
+    margin-left: 64px;
 }
-
 .republic {
     padding-top: 15px;
 }
@@ -151,9 +133,6 @@ body {
 .pt-13{
     margin-top:13px;
 }
-.ml-20{
-    margin-left: 20px;
-}
 
 .data {
     font-size: 15px; 
@@ -166,7 +145,7 @@ body {
     margin-top: 50px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-80%);
+    transform: translate(-50%,-50%);
     /* animation: floatUp 3s ease-in 0 1 normal forwards; */
 }
 #actualId:hover{
@@ -174,3 +153,68 @@ body {
     transition-duration: 0.25s;
     transition-timing-function: ease;
 }   
+.Button {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 40px;
+    width: max-content;
+    justify-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  
+  .Button:hover {
+    background-color: #45a049;
+  }
+  
+  .Button:focus {
+    outline: none;
+  }
+  
+.editIcon{
+    position: inherit;
+    background: var(--edit-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+    left: 90px;
+}
+.downloadIcon{
+    position: inherit;
+    background: var(--download-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+    left: 230px;
+}
+.formIcon{
+    position: inherit;
+    background: var(--form-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    margin-top: 4px;
+    left: 160px;
+}
+.formIcon:hover, .downloadIcon:hover, .editIcon:hover{
+    transform: scale(1.15, 1.15);
+    filter: drop-shadow(5px 5px 1px rgb(6, 189, 180));
+}
