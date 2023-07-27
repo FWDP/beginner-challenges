@@ -14,9 +14,8 @@ body{
     /* justify-content: center; */
     font-family: inter;
 }
-
 ::root{
-    --show-Border: 2px solid red;
+    --font-color:  black;
 }
 
 .id-container{
@@ -246,3 +245,95 @@ form > input, select{
     justify-content: center;
 } 
 
+
+
+/* EDIT MODE CSS */
+#eyesID:disabled{
+    background-color: transparent;
+    /* font-family: inter; */
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 50%;
+    border: none;
+    color:var(--font-color);
+    appearance: none;
+}
+
+#bloodID:disabled{
+    background-color: transparent;
+    /* font-family: inter; */
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 50%;
+    border: none;
+    color:var(--font-color);
+    appearance: none;
+}
+#addressID{
+    resize:none;
+    width: 90%;
+    height: 50px;
+    /* font-family: inter;
+    font-size: bolder;
+    background-color: white; */
+
+}
+#addressID:disabled{
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    width: 90%;
+    height: 50px;
+    border: none;
+    color:var(--font-color);
+    appearance: none;
+    resize:none;
+}
+#birthID{
+    width: 90%;
+}
+#birthID:disabled{
+    background-color: transparent;
+    /* font-family: inter; */
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 90%;
+    color:var(--font-color);  
+    border: none;
+}
+#sexID{
+    font-size: 0.9rem;
+    width: 50%;
+}
+#sexID:disabled{
+    background-color: transparent;
+    /* font-family: inter; */
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 25%;
+    color:var(--font-color);  
+    border: none;
+}
+#birthDateID:disabled{
+    background-color: transparent;
+    /* font-family: inter; */
+    font-weight: bolder;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    color:var(--font-color);
+    appearance: none;
+}
+#fullNameID{
+    width: 100%;
+}
+#fullNameID:disabled {
+    background-color: transparent;
+    /* font-family: inter; */
+    font-weight: bold;
+    font-size: .9rem;
+    width: 100%;
+    border: none;
+    color:var(--font-color);
+    appearance: none;
+}

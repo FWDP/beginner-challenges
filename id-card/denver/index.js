@@ -13,7 +13,7 @@ const idPhoto = document.querySelector("#photoID");
 const photoInput = document.querySelector("#photo");
 const modalBg = document.querySelector(".modal-bg");
 const downloadBtn = document.querySelector("#downLoadBtn");
-const dropDown = document.querySelector("#dropdown")
+const dropDown = document.querySelector("#dropdown");
 let uPhoto;
 
 const qrCode = document.querySelector("#qrCode");
@@ -22,27 +22,24 @@ downloadBtn.addEventListener("click", () => {});
 
 modalBg.addEventListener("click", () => {
   hideForm();
-  hideModal();
 });
 
 submitBtn.addEventListener("click", () => {
-  // generateQR()
   addToID();
   addIdPhoto();
   hideForm();
-  hideModal();
 });
 
 cancelBtn.addEventListener("click", () => {
   hideForm();
-  hideModal();
 });
 
 idCard.addEventListener("dblclick", () => {
-  showModal();
   showForm();
 });
 
+
+// get the value of user input in the form and then add it to the id card details
 const addToID = () => {
   let firstName = document.querySelector("#firstName").value;
   let middleName = document.querySelector("#middleName").value;
@@ -53,18 +50,19 @@ const addToID = () => {
   let bloodType = document.querySelector("#bloodType").value;
   let eyesColor = document.querySelector("#eyesColor").value;
 
-  idFullName.innerHTML = `${LastName.toUpperCase()}, ${firstName.toUpperCase()}, ${middleName.toUpperCase()}`;
-  idBirthDate.innerHTML = `${birthDate}`;
+  idFullName.value = `${LastName.toUpperCase()}, ${firstName.toUpperCase()}, ${middleName.toUpperCase()}`;
+  idBirthDate.value = `${birthDate}`;
+
   let sex = document.getElementsByName("Sex");
   for (i = 0; i < sex.length; i++) {
     if (sex[i].checked) {
-      idSex.innerHTML = sex[i].value;
+      idSex.value = sex[i].value;
     }
-  } //try if for each will work
-  idBirth.innerHTML = `${birthPlace.toUpperCase()}`;
-  idAddress.innerHTML = `${address.toUpperCase()}`;
-  idBlood.innerHTML = `${bloodType}`;
-  idEyes.innerHTML = `${eyesColor}`;
+  } 
+  idBirth.value = `${birthPlace.toUpperCase()}`;
+  idAddress.value = `${address.toUpperCase()}`;
+  idBlood.value = `${bloodType}`;
+  idEyes.value = `${eyesColor}`;
 
   let qrImage = `https://barcode.orcascan.com/?data=Hi I'm ${firstName} ${middleName} ${LastName} `;
 
@@ -73,8 +71,10 @@ const addToID = () => {
   form.reset();
 };
 
+
 const showForm = () => {
   form.style.display = `grid`;
+  modalBg.style.display = "block";
   photoInput.addEventListener("change", () => {
     const file = photoInput.files[0];
     const reader = new FileReader();
@@ -83,11 +83,10 @@ const showForm = () => {
   });
 };
 
-const hideForm = () => (form.style.display = `none`);
-
-const showModal = () => (modalBg.style.display = "block");
-
-const hideModal = () => (modalBg.style.display = "none");
+const hideForm = () => {
+  form.style.display = `none`;
+  modalBg.style.display = "none";
+};
 
 const addIdPhoto = () => idPhoto.setAttribute("src", uPhoto);
 
@@ -106,17 +105,27 @@ const screenShot = () => {
 
       console.log(qrCode);
       document.body.appendChild(downloadLink);
-
+      
       //Click the link to download the image
       downloadLink.click();
-    }
+    },
+
   );
 };
 
-const showList = ()=>{
-  let dropDownStyle = getComputedStyle(dropDown)
-  let dropDvalue = dropDownStyle.getPropertyValue("display")
-  let checkDropdDown = dropDvalue  === "none" ? true : false
-  dropDown.style.display = checkDropdDown ? "block" : "none"
-  
+const showList = () => {
+  let dropDownStyle = getComputedStyle(dropDown);
+  let dropDvalue = dropDownStyle.getPropertyValue("display");
+  let checkDropdDown = dropDvalue === "none" ? true : false;
+  dropDown.style.display = checkDropdDown ? "block" : "none";
+};
+
+const toggleEdit = () => {
+  idEyes.toggleAttribute("disabled");
+  idBlood.toggleAttribute("disabled");
+  idAddress.toggleAttribute("disabled");
+  idBirth.toggleAttribute("disabled");
+  idSex.toggleAttribute("disabled");
+  idBirthDate.toggleAttribute("disabled");
+  idFullName.toggleAttribute("disabled");
 }

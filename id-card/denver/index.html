@@ -27,33 +27,58 @@
                 <div class="details">
                     <div class="surName">
                         <h6>SURNAME, FIRST NAME, MIDDLNAME</h6>
-                            <h5 id="fullNameID">TALAMAYAN,DENVER BRIAN TAMPOL </h5>
+                            <input type="text" value="TALAMAYAN, DENVER BRIAN, TAMPOL" id="fullNameID" disabled>
                     </div>
                     <div class="birth">
                         <h6>DATE OF BIRTH</h6>
-                        <h5 id="birthDateID">2023-07-10</h5>
+                        <!-- <h5 id="birthDateID">2023-07-10</h5> -->
+                        <input type="date" value="2023-07-10" id="birthDateID" disabled>
                     </div>
                     <div class="sexPlace">
                         <div>
                             <h6>SEX</h6>
-                            <h5 id="sexID">M</h5>
+                            <!-- <h5 id="sexID">M</h5> -->
+                            <input type="text" value="M" id="sexID" disabled>
                         </div>
                         <div>
                             <h6>PLACE OF BIRTH</h6>
-                            <h5 id="birthID">PHILIPPINES</h5>
+                            <!-- <h5 id="birthID">PHILIPPINES</h5> -->
+                            <input type="text" id="birthID" value="PHILIPPINES" disabled>
                         </div> 
                     </div>
                     <div class="address">
                         <h6>ADDRESS</h6>
-                        <h5 id="addressID">1600 Amphitheatre Parkway in Mountain View, California.</h5>
+                        <!-- <h5 id="addressID">1600 Amphitheatre Parkway in Mountain View, California.</h5> -->
+                        <textarea type="text" id="addressID"   disabled>1600 Amphitheatre Parkway in  Mountain View, California</textarea>
+
                     </div>
                     <div class="bloodType">
                         <h6>BLOOD TYPE</h6>
-                        <h5 id="bloodID">AB+</h5>
+                        <!-- <h5 id="bloodID">AB+</h5> -->
+                        <select name="" id="bloodID" disabled>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">0+</option>
+                            <option value="0-">0-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
                     </div>
                     <div class="eyesColor">
                         <h6>EYES COLOR</h6>
-                        <h5 id="eyesID">BROWN</h5>
+                        <!-- <h5 id="eyesID">BROWN</h5> -->
+                        <!-- <input type="text"  value="BROWN" id="test" disabled> -->
+                        <select name="" id="eyesID" disabled>
+                            <option value="AMBER">AMBER</option>
+                            <option value="BLUE">BLUE</option>
+                            <option value="BROWN">BROWN</option>
+                            <option value="GRAY">GRAY</option>
+                            <option value="GREEN">GREEN</option>
+                            <option value="HAZEL">HAZEL</option>
+                            <option value="RED">RED</option>
+                        </select>  
                     </div>
                 </div>
                 <!-- <div class="barcode"> -->
@@ -70,17 +95,17 @@
                             <button id="downLoadBtn" onclick="screenShot()">Downloan ID</button>
                         </li>
                         <li>
-                            <button id="editMode">edit mode</button>
+                            <button id="editMode" onclick="toggleEdit()">edit mode</button>
                         </li>
                         <li>
-                            <button onclick="">show Form</button>
+                            <button onclick="showForm()">show Form</button>
                         </li>
                     </ul>
                 </div> 
             </div>
             
     </div>
-                     
+                  
     <div class="modal-bg">    
     </div>
     
@@ -173,7 +198,7 @@
 
     
 
-    <script></script>
+
     <script src="index.js"></script>
 </body>
 </html>
