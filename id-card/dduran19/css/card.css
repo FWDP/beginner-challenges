@@ -31,3 +31,38 @@
 .newDetailLabel{
     padding:5px
 }
+
+input, select {
+    border-radius: 15px;
+    margin-bottom: 5px;
+    height: 35px;
+}
+.uploadText{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.profilePictureContainer{
+    border: 2px dashed #39b9da;
+	border-radius: 40px;
+	width: 350px;
+	text-align: center;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+.uploadButton{
+    position: relative;
+	top: -22px;
+    left: 5px;
+}
+.uploadIcon{
+    display: block;
+    margin: 20px auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+#profilePicture{
+opacity: 0%;
+cursor: pointer;
+
+}
