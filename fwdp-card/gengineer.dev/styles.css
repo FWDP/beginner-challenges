@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-family: 'Share Tech Mono', 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #0f0f0f;
+}
+
+.main-picture {
+    border-radius: 5px;
+}
+
+.card {
+    border-radius: 10px;
+    width: 380px;
+    color: rgb(253, 244, 244);
+    padding: 10px;
+}
+
+.name {
+    background: rgb(255,1,199);
+    background: linear-gradient(90deg, rgba(255,1,199,1) 0%, rgba(255,93,219,1) 100%);
+}
+
+#discord-details {
+    background: rgb(122,33,254);
+    background: linear-gradient(90deg, rgba(122,33,254,1) 0%, rgba(166,108,253,1) 78%, rgba(216,192,251,1) 100%);    
+    display: flex;
+    flex-direction: row;
+    
+    gap: 10px;
+    justify-content: center;
+}
+
+div {
+    margin: 10px 0;
+}
+
+#discord-details > img {
+    filter: brightness(0) invert(1);
+}
