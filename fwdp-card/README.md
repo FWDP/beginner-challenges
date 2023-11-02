@@ -81,7 +81,9 @@ After reviewing what you did, the maintainer or admin will merge it to the main 
 
 ## Showcase Your Output
 
-Reach 500 points on our [Facebook Group](https://fb.com/groups/fwdpeers) and Level 20 on [Discord](https://discord.com/servers/filipino-web-development-peers-996276138588524624)! You can start by sharing your FWDP card on these platforms!
+Goal: Reach 500 points on our [Facebook Group](https://fb.com/groups/fwdpeers) and Level 20 on [Discord](https://discord.com/servers/filipino-web-development-peers-996276138588524624)! If you reached it, you'll be eligible to receive the perks of an active Core Plus mentee!
+
+You can start by sharing your FWDP card on these platforms!
 
 On Discord, we recommend posting it in our **#💯・100-days-of-code** channel!
 
