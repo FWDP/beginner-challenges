@@ -79,9 +79,6 @@ After reviewing what you did, the maintainer or admin will merge it to the main 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Showcase Your Output
 
 Reach 500 points on our [Facebook Group](https://fb.com/groups/fwdpeers) and Level 20 on [Discord](https://discord.com/servers/filipino-web-development-peers-996276138588524624)! You can start by sharing your FWDP card on these platforms!
