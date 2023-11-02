@@ -7,6 +7,8 @@
     <h3 align="center">FWDP Card</h3>
     <p>An awesome simple project to jumpstart your HTML/CSS/JS journey!</p>
     <a href="https://github.com/FWDP/beginner-challenges/tree/main/fwdp-card/"><strong>Explore the docs »</strong></a>
+     ·
+    <a href="https://drive.google.com/file/d/1u7V5YoFtGlrjdfT0e-3hcX9oRkKqvK9_/view?usp=drive_link/"><strong>Watch Core Plus recording »</strong></a>
     <br />
     <br />
 </div>
