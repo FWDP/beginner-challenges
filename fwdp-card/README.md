@@ -13,6 +13,27 @@
     <br />
 </div>
 
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#showcase-your-output">Showcase Your Output</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
 ## About the Project
 
 This project covers the basics of HTML and CSS to create an aesthetically pleasing card containing information that you can share with other FWDPeers!
